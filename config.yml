@@ -1,0 +1,11 @@
+baseURL: "https://maximilian-pierzyna.de/"
+languageCode: "en-us"
+title: "Maximilian Pierzyna"
+theme: "hugo-PaperMod"
+
+params:
+  profileMode:
+    enabled: true
+    imageUrl: "img/foto_me.jpg"
+    imageWidth: 300
+    imageHeight: 300
