@@ -2,10 +2,14 @@ baseURL: "https://maximilian-pierzyna.de/"
 languageCode: "en-us"
 title: "Maximilian Pierzyna"
 theme: "hugo-PaperMod"
+publishDir: "docs"
 
 params:
+  AuthorName: Maximilian Pierzyna
   profileMode:
     enabled: true
     imageUrl: "img/foto_me.jpg"
     imageWidth: 300
     imageHeight: 300
+
+
