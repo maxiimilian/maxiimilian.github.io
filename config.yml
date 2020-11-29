@@ -34,11 +34,18 @@ privacy:
 
 # Site params
 params:
-  AuthorName: Maximilian Pierzyna
+  #AuthorName: Maximilian Pierzyna
   profileMode:
     enabled: true
+    subtitle: subtitle
     imageUrl: "/img/foto_me.jpg"
     imageWidth: 300
     imageHeight: 300
+    buttons:
+      # Button names can be i18n id to be translated on language switch
+      - name: cv
+        url: "/files/Maximilian_Pierzyna_CV.pdf"
+      - name: contact
+        url: "contact"
 
 
