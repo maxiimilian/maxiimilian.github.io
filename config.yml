@@ -1,14 +1,43 @@
-baseURL: "https://maximilian-pierzyna.de/"
-languageCode: "en-us"
-title: "Maximilian Pierzyna"
-theme: "hugo-PaperMod"
-publishDir: "docs"
+baseURL: https://maximilian-pierzyna.de/
+languageCode: de
+title: Maximilian Pierzyna
+theme: hugo-PaperMod
+publishDir: docs
 
+# Language settings
+DefaultContentLanguage: de
+DefaultContentLanguageInSubdir: true
+languages:
+  de:
+    contentDir: content/de
+    languageName: Deutsch
+    weight: 1
+  en:
+    contentDir: content/en
+    languageName: English
+    weight: 2
+
+# Disable all 3rd party functionalities
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  twitter:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: true
+
+# Site params
 params:
   AuthorName: Maximilian Pierzyna
   profileMode:
     enabled: true
-    imageUrl: "img/foto_me.jpg"
+    imageUrl: "/img/foto_me.jpg"
     imageWidth: 300
     imageHeight: 300
 

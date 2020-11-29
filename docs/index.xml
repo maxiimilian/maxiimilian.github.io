@@ -5,10 +5,6 @@
     <link>https://maximilian-pierzyna.de/</link>
     <description>Recent content on Maximilian Pierzyna</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Maximilian Pierzyna</title>
-    <link>https://maximilian-pierzyna.de/tags/</link>
+    <link>https://maximilian-pierzyna.de/de/tags/</link>
     <description>Recent content in Tags on Maximilian Pierzyna</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://maximilian-pierzyna.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>de</language><atom:link href="https://maximilian-pierzyna.de/de/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
