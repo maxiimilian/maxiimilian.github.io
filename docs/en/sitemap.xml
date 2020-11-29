@@ -17,6 +17,20 @@
   </url>
   
   <url>
+    <loc>https://maximilian-pierzyna.de/en/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://maximilian-pierzyna.de/de/kontakt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://maximilian-pierzyna.de/en/contact/"
+                />
+  </url>
+  
+  <url>
     <loc>https://maximilian-pierzyna.de/en/legal-notice/</loc>
     <xhtml:link
                 rel="alternate"

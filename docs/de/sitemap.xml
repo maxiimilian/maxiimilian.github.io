@@ -45,6 +45,20 @@
   </url>
   
   <url>
+    <loc>https://maximilian-pierzyna.de/de/kontakt/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://maximilian-pierzyna.de/en/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://maximilian-pierzyna.de/de/kontakt/"
+                />
+  </url>
+  
+  <url>
     <loc>https://maximilian-pierzyna.de/de/</loc>
     <xhtml:link
                 rel="alternate"

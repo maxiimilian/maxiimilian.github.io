@@ -4,17 +4,16 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<title>404 Page not found - Maximilian Pierzyna</title>
+<meta name=" robots" content="noindex, nofollow">
+<title>404 Page not found | Maximilian Pierzyna</title>
 
 <meta name="keywords" content="" />
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/de/404.html" />
-<link href="https://maximilian-pierzyna.de/assets/css/stylesheet.min.595f5ecef354f9eb94e43d831cd360dcf8b7727542e731c55a7875c9e94a9577.css" integrity="sha256-WV9ezvNU&#43;euU5D2DHNNg3Pi3cnVC5zHFWnh1yelKlXc=" rel="preload stylesheet"
+<link href="https://maximilian-pierzyna.de/assets/css/stylesheet.min.34a0eab8ff7e541ee11f0b795d68c6cd2ee111a4bf8e3a7bcb986c4a9201b8d2.css" integrity="sha256-NKDquP9&#43;VB7hHwt5XWjGzS7hEaS/jjp7y5hsSpIBuNI=" rel="preload stylesheet"
     as="style">
 
-<link rel="manifest" href="https://maximilian-pierzyna.de/site.webmanifest">
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
@@ -135,7 +134,7 @@
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             var id = this.getAttribute("href").substr(1);
-            document.querySelector(`[id='${id}']`).scrollIntoView({
+            document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
                 behavior: "smooth"
             });
         });
@@ -150,9 +149,11 @@
             mybutton.style.opacity = "0";
         }
     };
+
     function menu_on_scroll() {
         localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
+
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
@@ -164,6 +165,7 @@
             localStorage.setItem("pref-theme", 'dark');
         }
     })
+
 </script>
 
 </body>
