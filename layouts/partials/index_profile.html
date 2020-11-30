@@ -10,7 +10,7 @@
         {{- with .buttons }}
         <div class="buttons">
             {{- range . -}}
-            <a class="button" href="{{ .url | absLangURL }}" rel="noopener" title="{{ i18n .name | default .name | humanize }}">
+            <a class="button" href="{{ .url }}" rel="noopener" title="{{ i18n .name | default .name | humanize }}">
                 <span class="button-inner">{{ i18n .name | default .name }}</span>
             </a>
             {{- end -}}
