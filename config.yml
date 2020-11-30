@@ -34,7 +34,6 @@ privacy:
 
 # Site params
 params:
-  #AuthorName: Maximilian Pierzyna
   profileMode:
     enabled: true
     subtitle: subtitle
@@ -47,5 +46,14 @@ params:
         url: "/files/Maximilian_Pierzyna_CV.pdf"
       - name: contact
         url: "contact"
+
+  # Custom CSS
+  custom_css: 
+    - "css/halfmoon/halfmoon_hm-11.css"
+
+  # Custom JS (currently not in use)
+  #custom_js: 
+    #- "js"
+
 
 
