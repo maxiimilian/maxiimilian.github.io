@@ -24,8 +24,7 @@
 <meta name="generator" content="Hugo 0.75.1" />
 <link rel="alternate" type="application/rss&#43;xml" href="https://maximilian-pierzyna.de/en/index.xml">
 <link rel="alternate" hreflang="de" href="https://maximilian-pierzyna.de/de/" />
-
-
+<link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css">
 
 
 </head>
@@ -34,10 +33,13 @@
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -111,11 +113,11 @@
     <div class="profile_inner"><img src="/img/foto_me.jpg" alt="profile image"
             height="300" width="300" />
         <h1>Maximilian Pierzyna</h1>
-        <span>interested in orbital mechanics 🚀, fluid mechanics 💨, and data-driven modelling 📊</span><div class="social-icons"></div>
+        <span>interested in orbital dynamics 🚀, fluid mechanics 💨, and data-driven modelling 📊</span><div class="social-icons"></div>
 
-        <div class="buttons"><a class="button" href="https://maximilian-pierzyna.de/en/files/Maximilian_Pierzyna_CV.pdf" rel="noopener" title="C v">
-                <span class="button-inner">CV</span>
-            </a><a class="button" href="https://maximilian-pierzyna.de/en/contact" rel="noopener" title="Contact">
+        <div class="buttons"><a class="button" href="/files/Maximilian_Pierzyna_CV.pdf" rel="noopener" title="C v ( p d f)">
+                <span class="button-inner">CV (PDF)</span>
+            </a><a class="button" href="contact" rel="noopener" title="Contact">
                 <span class="button-inner">Contact</span>
             </a></div>
     </div>
@@ -134,8 +136,6 @@
             <path d="M12 6H0l6-6z" /></svg>
     </button>
 </a>
-
-
 
 <script>
     window.onload = function () {
@@ -172,9 +172,11 @@
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })

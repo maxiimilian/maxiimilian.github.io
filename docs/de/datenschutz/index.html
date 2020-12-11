@@ -24,8 +24,7 @@ Datenerfassung auf dieser Website Wer ist verantwortlich für die Datenerfassung
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.75.1" />
 <link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/en/privacy/" />
-
-
+<link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css">
 
 
 </head>
@@ -34,10 +33,13 @@ Datenerfassung auf dieser Website Wer ist verantwortlich für die Datenerfassung
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -231,8 +233,6 @@ E-Mail: <a href="mailto:mail@maximilian-pierzyna.de">mail@maximilian-pierzyna.de
     </button>
 </a>
 
-
-
 <script>
     window.onload = function () {
         if (localStorage.getItem("menu-scroll-position")) {
@@ -268,9 +268,11 @@ E-Mail: <a href="mailto:mail@maximilian-pierzyna.de">mail@maximilian-pierzyna.de
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
