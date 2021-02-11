@@ -2,4 +2,4 @@
 title: Privacy Policy
 menu: main
 ---
-Work in progress. Please refer to the [German version](http://google.com) in the mean time.
+Work in progress. Please refer to the [German version]({{< relref path="privacy.md" lang="de" >}}) in the mean time.

@@ -10,11 +10,11 @@ DefaultContentLanguageInSubdir: true
 languages:
   de:
     contentDir: content/de
-    languageName: Deutsch
+    languageName: ":de:"
     weight: 1
   en:
     contentDir: content/en
-    languageName: English
+    languageName: ":uk:"
     weight: 2
 
 # Disable all 3rd party functionalities
@@ -34,6 +34,7 @@ privacy:
 
 # Site params
 params:
+  displayFullLangName: true
   profileMode:
     enabled: true
     subtitle: subtitle
