@@ -1,6 +1,8 @@
 ---
 title: Test
-menu: main
+tags:
+- Machine Learning
+date: 2021-02-12
 ---
 h2
 --

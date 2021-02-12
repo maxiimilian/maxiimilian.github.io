@@ -3,6 +3,8 @@ languageCode: de
 title: Maximilian Pierzyna
 theme: hugo-PaperMod
 publishDir: docs
+ignoreFiles: 
+ - "\\.sh$"
 
 # Language settings
 DefaultContentLanguage: de
@@ -47,6 +49,8 @@ params:
         url: "/files/Maximilian_Pierzyna_CV.pdf"
       - name: contact
         url: "contact"
+      - name: "Blog"
+        url: "blog"
 
   # Custom CSS
   custom_css: 
