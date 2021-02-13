@@ -52,6 +52,8 @@ params:
       - name: "Blog"
         url: "blog"
 
+  showLicenseAlways: true
+
   # Custom CSS
   custom_css: 
     - "css/halfmoon/halfmoon_hm-11.css"

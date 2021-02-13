@@ -2,6 +2,7 @@
 title: Datenschutz
 slug: datenschutz
 menu: main
+showLicense: false
 ---
 ## 1. Datenschutz auf einen Blick
 ### Allgemeine Hinweise

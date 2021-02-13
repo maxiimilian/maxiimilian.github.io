@@ -2,6 +2,7 @@
 title: Impressum
 slug: impressum
 menu: main
+showLicense: false
 ---
 ## Angaben gemäß § 5 TMG
 Maximilian Pierzyna \

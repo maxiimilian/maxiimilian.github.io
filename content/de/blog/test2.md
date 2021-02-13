@@ -1,8 +1,9 @@
 ---
-title: "Fluid Mechanics Example"
+title: "Strömungsmechanikbeispiel"
 tags:
 - Machine Learning
 - Fluid Mechanics
+showLicense: false
 ---
 
-This is just an example
+Das ist nur ein Beispiel, das keine Lizenz anzeigen sollte.
