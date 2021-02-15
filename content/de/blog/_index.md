@@ -1,3 +1,4 @@
 ---
 title: Artikel
+menu: main
 ---
