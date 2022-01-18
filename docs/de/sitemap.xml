@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://maximilian-pierzyna.de/de/categories/</loc>
     <xhtml:link
@@ -14,9 +13,7 @@
                 hreflang="de"
                 href="https://maximilian-pierzyna.de/de/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/de/datenschutz/</loc>
     <xhtml:link
                 rel="alternate"
@@ -28,9 +25,7 @@
                 hreflang="de"
                 href="https://maximilian-pierzyna.de/de/datenschutz/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/de/impressum/</loc>
     <xhtml:link
                 rel="alternate"
@@ -42,9 +37,7 @@
                 hreflang="de"
                 href="https://maximilian-pierzyna.de/de/impressum/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/de/kontakt/</loc>
     <xhtml:link
                 rel="alternate"
@@ -56,9 +49,7 @@
                 hreflang="de"
                 href="https://maximilian-pierzyna.de/de/kontakt/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/de/</loc>
     <xhtml:link
                 rel="alternate"
@@ -70,9 +61,7 @@
                 hreflang="de"
                 href="https://maximilian-pierzyna.de/de/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/de/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -85,5 +74,4 @@
                 href="https://maximilian-pierzyna.de/de/tags/"
                 />
   </url>
-  
 </urlset>

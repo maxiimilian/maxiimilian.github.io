@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Machine Learning on Maximilian Pierzyna</title>
+    <link>https://maximilian-pierzyna.de/en/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Maximilian Pierzyna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://maximilian-pierzyna.de/en/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://maximilian-pierzyna.de/en/blog/test/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/en/blog/test/</guid>
+      <description>h2
+--
+Here is a citation [Guyon2003_]
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</description>
+    </item>
+    
+    <item>
+      <title>Combining Jupyter and Hugo</title>
+      <link>https://maximilian-pierzyna.de/en/blog/2021-02-13_jupyter_hugo/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/en/blog/2021-02-13_jupyter_hugo/</guid>
+      <description>Here, I briefly present my workflow to convert Jupyter notebooks to Hugo articles.
+Setup pip install jupyter nbconvert Convert Notebook to Markdown jupyter nbconvert --to markdown notebook.ipynb You will end up with the markdown file notebook.md and a directory containing the notebook&amp;rsquo;s assets called notebook_files.
+Create new Hugo Post To keep the notebook&amp;rsquo;s main text and its assets together I decided to not put the assets into Hugo&amp;rsquo;s /static directory. Instead we create a new folder in /content/ (or wherever the post should appear) and give it the name of our post.</description>
+    </item>
+    
+    <item>
+      <title>Dealing with Imbalance Datasets (MD)</title>
+      <link>https://maximilian-pierzyna.de/en/blog/jupyter_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/en/blog/jupyter_test/</guid>
+      <description>Dealing with Imbalanced Datasets from sklearn.datasets import make_blobs import matplotlib.pyplot as plt import numpy as np minority_ratio = 1/4 n_samples = 100 n_features = 2 # Define labels for minority and majority class minority_class = 0 majority_class = 1 X = np.zeros((n_samples, n_features)) y = np.zeros(n_samples) # Generate two imbalanced blobs k = int(n_samples * (1-minority_ratio)) X[:k, :], _ = make_blobs(k, n_features, 1, random_state=0) y[:k] = minority_class X[k:, :], _ = make_blobs(n_samples-k, n_features, 1, random_state=1) y[:k] = majority_class plt.</description>
+    </item>
+    
+    <item>
+      <title>Fluid Mechanics Example</title>
+      <link>https://maximilian-pierzyna.de/en/blog/test2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/en/blog/test2/</guid>
+      <description>This is just an example</description>
+    </item>
+    
+  </channel>
+</rss>
