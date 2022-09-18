@@ -5,7 +5,7 @@ theme: hugo-PaperMod
 publishDir: docs
 
 # Language settings
-DefaultContentLanguage: de
+DefaultContentLanguage: en
 DefaultContentLanguageInSubdir: true
 languages:
   de:
