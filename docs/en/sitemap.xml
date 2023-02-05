@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://maximilian-pierzyna.de/en/research/</loc>
+  </url><url>
+    <loc>https://maximilian-pierzyna.de/en/card/</loc>
+  </url><url>
+    <loc>https://maximilian-pierzyna.de/en/research/atmospheric_turbulence/</loc>
+  </url><url>
     <loc>https://maximilian-pierzyna.de/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -13,6 +19,8 @@
                 hreflang="en"
                 href="https://maximilian-pierzyna.de/en/categories/"
                 />
+  </url><url>
+    <loc>https://maximilian-pierzyna.de/en/research/fragmentation_modelling/</loc>
   </url><url>
     <loc>https://maximilian-pierzyna.de/en/contact/</loc>
     <xhtml:link
@@ -26,17 +34,11 @@
                 href="https://maximilian-pierzyna.de/en/contact/"
                 />
   </url><url>
-    <loc>https://maximilian-pierzyna.de/en/legal-notice/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://maximilian-pierzyna.de/de/impressum/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://maximilian-pierzyna.de/en/legal-notice/"
-                />
+    <loc>https://maximilian-pierzyna.de/en/research/drop_impact/</loc>
+  </url><url>
+    <loc>https://maximilian-pierzyna.de/en/research/dynamics_modelling/</loc>
+  </url><url>
+    <loc>https://maximilian-pierzyna.de/en/tags/machine-learning/</loc>
   </url><url>
     <loc>https://maximilian-pierzyna.de/en/</loc>
     <xhtml:link

@@ -26,18 +26,6 @@
                 href="https://maximilian-pierzyna.de/de/datenschutz/"
                 />
   </url><url>
-    <loc>https://maximilian-pierzyna.de/de/impressum/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://maximilian-pierzyna.de/en/legal-notice/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://maximilian-pierzyna.de/de/impressum/"
-                />
-  </url><url>
     <loc>https://maximilian-pierzyna.de/de/kontakt/</loc>
     <xhtml:link
                 rel="alternate"
