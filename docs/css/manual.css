@@ -69,3 +69,57 @@ code.has-jax {
     color: #000;
     transform: rotateY(180deg);
 }
+
+/* Publication details */
+.publication-details a {
+    color: #004cff;
+}
+
+.dark .publication-details a {
+    color: #59bcff;
+}
+
+.publication-details .publication-url .fa {
+    font-size: .85em;
+}
+
+.post-entry.publication .publication-authors,
+.post-entry.publication .publication-details {
+    font-size: .85em;
+}
+.post-entry.publication h2 {
+    margin: 0.1em 0 0.1em 0;
+}
+
+.post-single .publication-header-img {
+    color: var(--secondary);
+    font-size: 0.85em;
+    margin: 0 0 0.5em 0;
+}
+
+/*Publication header image*/
+.publication-header-img > div {
+    width: 100%;
+    padding: 0.25em;
+}
+
+.post-entry .publication-header-img {
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.post-entry .publication-header-img > div {
+    display: none;
+    position: absolute;
+    background-color: var(--tertiary);
+    bottom: 0;
+    opacity: .85;
+}
+
+.post-entry .publication-header-img:hover > div {
+    display: block;
+}
+
+.post-single .publication-header-img img {
+    margin: 0;
+}

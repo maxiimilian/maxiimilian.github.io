@@ -1,0 +1,6 @@
+{{ with .Resources.GetMatch "header" }}
+  <div class="publication-header-img">
+      <img src="{{ .Permalink }}" alt="{{ .Title}}">
+      <div>Figure: {{ .Title }}</div>
+  </div>
+{{ end}}

@@ -1,5 +1,20 @@
 ---
+layout: pub_single
+
 title: Data-driven splashing threshold model for drop impact on dry smooth surfaces
+authors: "**M. Pierzyna**, D. A. Burzynski, S. E. Bansmer, R. Semaan"
+
+resources:
+- name: header
+  src: 2021_drop_impact.png
+  title: Schematic of our three-step data-driven approach.
+
+pubJournal: Physics of Fluids
+pubYear: 2021
+pubUrl: https://aip.scitation.org/doi/10.1063/5.0076427
+pubCode: https://github.com/FlowModelingControl/data_driven_splashing_model
+pubOpenAccess: true
+
 tags:
 - "Machine Learning"
 ---
@@ -18,6 +33,3 @@ tension, and the gas density. Detailed quantification of the prediction performa
 with state-of-the-art models show that the proposed threshold model is the most accurate model to 
 describe the boundaries between deposition and splashing for a wide range of impact conditions. 
 The simplicity and accuracy of this model make it an alternative to existing approaches.
-
-Full text available (open access): [https://doi.org/10.1063/5.0076427](https://doi.org/10.1063/5.0076427).
-
