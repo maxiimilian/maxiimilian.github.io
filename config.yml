@@ -1,21 +1,21 @@
 baseURL: https://maximilian-pierzyna.de/
-languageCode: de
+languageCode: en
 title: Maximilian Pierzyna
 theme: hugo-PaperMod
 publishDir: docs
 
 # Language settings
-DefaultContentLanguage: en
-DefaultContentLanguageInSubdir: true
-languages:
-  de:
-    contentDir: content/de
-    languageName: ":de:"
-    weight: 1
-  en:
-    contentDir: content/en
-    languageName: ":uk:"
-    weight: 2
+#DefaultContentLanguage: en
+#DefaultContentLanguageInSubdir: true
+#languages:
+  #de:
+    #contentDir: content/de
+    #languageName: ":de:"
+    #weight: 1
+  #en:
+    #contentDir: content/en
+    #languageName: ":uk:"
+    #weight: 2
 
 # Disable all 3rd party functionalities
 privacy:
@@ -37,16 +37,27 @@ params:
   displayFullLangName: true
   profileMode:
     enabled: true
-    subtitle: subtitle
+    subtitle:  "curious about modelling atmospheric turbulence 💨 with data-driven methods 📊"
     imageUrl: "/img/foto_me.jpg"
+    imageUrlDark: "/img/foto_me.jpg"
     imageWidth: 300
     imageHeight: 300
     buttons:
       # Button names can be i18n id to be translated on language switch
-      - name: cv
+      - name: Research
+        url: "/research"
+      - name: CV (PDF)
         url: "/files/Maximilian_Pierzyna_CV.pdf"
-      - name: contact
+      - name: Contact
         url: "contact"
+
+  socialIcons:
+    - name: Linkedin
+      url: https://www.linkedin.com/in/maximilian-pierzyna-b6540a143
+    - name: Github
+      url: https://github.com/mpierzyna
+    - name: GoogleScholar
+      url: https://scholar.google.com/citations?user=8puaR54AAAAJ
 
   # Custom CSS
   custom_css: 
