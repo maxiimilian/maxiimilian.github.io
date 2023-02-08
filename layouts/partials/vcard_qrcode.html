@@ -1,0 +1,4 @@
+{{- if .vcardQrUrl }}
+<img id="vcard-qr" style="display: none" src="{{ .vcardQrUrl | absURL }}" alt="QR code with vCard" 
+     height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}"/>
+{{- end }}

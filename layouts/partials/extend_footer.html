@@ -1,4 +1,4 @@
 {{ range .Site.Params.custom_js -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <script src="{{ . | absURL }}"></script>
 {{- end }}
 {{ partial "mathjax_support.html" . }}

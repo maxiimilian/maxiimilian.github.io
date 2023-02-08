@@ -39,7 +39,7 @@ params:
     enabled: true
     subtitle:  "curious about modelling atmospheric turbulence 💨 with data-driven methods 📊"
     imageUrl: "/img/foto_me.jpg"
-    imageUrlDark: "/img/foto_me.jpg"
+    vcardQrUrl: "/img/vcard_qr.png"
     imageWidth: 300
     imageHeight: 300
     buttons:
@@ -65,8 +65,7 @@ params:
     - "css/manual.css"
 
   # Custom JS (currently not in use)
-  #custom_js: 
-    #- "js"
-
+  custom_js: 
+    - "js/custom.js"
 
 

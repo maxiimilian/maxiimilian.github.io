@@ -123,3 +123,12 @@ code.has-jax {
 .post-single .publication-header-img img {
     margin: 0;
 }
+
+/* QR VCard */
+#profile-img {
+    cursor: pointer;
+}
+#vcard-qr {
+    border-radius: 0;
+    cursor: pointer;
+}
