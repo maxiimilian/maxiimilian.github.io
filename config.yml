@@ -58,6 +58,8 @@ params:
       url: https://github.com/mpierzyna
     - name: GoogleScholar
       url: https://scholar.google.com/citations?user=8puaR54AAAAJ
+    - name: ResearchGate
+      url: https://www.researchgate.net/profile/Maximilian-Pierzyna
 
   # Custom CSS
   custom_css: 
