@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer | Maximilian Pierzyna</title>
 <meta name="keywords" content="Machine Learning, Optical Turbulence">
-<meta name="description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this article, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model.">
+<meta name="description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2023a_piml/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
@@ -59,7 +59,7 @@
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta property="og:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer" />
-<meta property="og:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this article, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model." />
+<meta property="og:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://maximilian-pierzyna.de/research/2023a_piml/" /><meta property="article:section" content="research" />
 
@@ -67,7 +67,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer"/>
-<meta name="twitter:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this article, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model."/>
+<meta name="twitter:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$."/>
 
 
 <script type="application/ld+json">
@@ -96,12 +96,12 @@
   "@type": "BlogPosting",
   "headline": "$\\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer",
   "name": "$\\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer",
-  "description": "Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this article, we propose a physics-informed machine learning (ML) methodology, $\\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model.",
+  "description": "Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.",
   "keywords": [
     "Machine Learning", "Optical Turbulence"
   ],
-  "articleBody": "Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this article, we propose a physics-informed machine learning (ML) methodology, $\\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting turbulence strength. For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\\pm0.001$.\n",
-  "wordCount" : "122",
+  "articleBody": "Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$. For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\\pm0.001$.\nOpen access version on arxiv: https://arxiv.org/abs/2304.12177.\n",
+  "wordCount" : "107",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -181,8 +181,8 @@
     <h1 class="post-title">
       $\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer
     </h1><div class="publication-details">
-    arXiv (pre-print) (2023) | 
-    <a class="publication-url" href="https://arxiv.org/abs/2304.12177" target="_blank">Full text <i class="fa-solid fa-lock-open"></i></a> |
+    Optics Letters (2023) | 
+    <a class="publication-url" href="https://doi.org/10.1364/OL.492652" target="_blank">Full text <i class="fa-solid fa-lock"></i></a> |
     <a href="https://github.com/mpierzyna/piml" target="_blank">Code</a> 
 </div>
 
@@ -198,10 +198,10 @@
 
 <p>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
-In this article, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
-Our approach combines ideas from traditional physics-based $C_n^2$ parametrizations and recent ML-based ones into a high-accuracy, statistically robust, non-dimensional model.
-Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting turbulence strength.
+In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
+Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
 For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.</p>
+<p><strong>Open access</strong> version on arxiv: <a href="https://arxiv.org/abs/2304.12177">https://arxiv.org/abs/2304.12177</a>.</p>
 
 
   </div>
