@@ -15,5 +15,14 @@
       <description>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.</description>
     </item>
     
+    <item>
+      <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation</title>
+      <link>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
+      <description>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.</description>
+    </item>
+    
   </channel>
 </rss>
