@@ -1,5 +1,5 @@
 <div class="publication-details">
     {{ .pubJournal }} ({{ .pubYear}}) | 
-    <a class="publication-url" href="{{ .pubUrl }}" target="_blank">Full text {{- if .PubOpenAccess }} <i class="fa-solid fa-lock-open"></i>{{- else}} <i class="fa-solid fa-lock"></i>{{ end }}</a> |
-    <a href="{{ .pubCode }}" target="_blank">Code</a> 
+    <a class="publication-url" href="{{ .pubUrl }}" target="_blank">Full text {{- if .PubOpenAccess }} <i class="fa-solid fa-lock-open"></i>{{- else}} <i class="fa-solid fa-lock"></i>{{ end }}</a> 
+    {{- if .pubCode }} | <a href="{{ .pubCode }}" target="_blank">Code</a>{{ end }}
 </div>
