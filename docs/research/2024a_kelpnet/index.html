@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Mesoscale Modelling | Maximilian Pierzyna</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring | Maximilian Pierzyna</title>
+<meta name="keywords" content="Machine Learning, Earth Observation">
+<meta name="description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.">
 <meta name="author" content="">
-<link rel="canonical" href="https://maximilian-pierzyna.de/tags/mesoscale-modelling/">
+<link rel="canonical" href="https://maximilian-pierzyna.de/research/2024a_kelpnet/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
@@ -18,7 +20,6 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://maximilian-pierzyna.de/tags/mesoscale-modelling/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,18 +58,70 @@
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="Mesoscale Modelling" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/tags/mesoscale-modelling/" />
+<meta property="og:title" content="KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring" />
+<meta property="og:description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://maximilian-pierzyna.de/research/2024a_kelpnet/" /><meta property="article:section" content="research" />
+
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Mesoscale Modelling"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring"/>
+<meta name="twitter:description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs."/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Research",
+      "item": "https://maximilian-pierzyna.de/research/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring",
+      "item": "https://maximilian-pierzyna.de/research/2024a_kelpnet/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring",
+  "name": "KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring",
+  "description": "Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.",
+  "keywords": [
+    "Machine Learning", "Earth Observation"
+  ],
+  "articleBody": "Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs. A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions. Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData “KelpWanted” machine learning competition (#38/671, 3.88% below winning solution).\nThis work was an entry for the “KelpWanted” DrivenData machine learning competition and was presented as a poster at the 2024 edition of the ESA-ECMWF Machine Learning for Earth System Observation and Prediction (ML4EOPS, https://www.ml4esop.esa.int) workshop.\nPoster High-resolution version of poster: pdf, 3MB\n",
+  "wordCount" : "163",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://maximilian-pierzyna.de/research/2024a_kelpnet/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Maximilian Pierzyna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://maximilian-pierzyna.de/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -119,23 +172,52 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Mesoscale Modelling
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$....</p>
+<article class="post-single publication">
+  <header class="post-header">
+    
+    <strong>M. Pierzyna</strong>
+    <h1 class="post-title">
+      KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring
+    </h1><div class="publication-details">
+    ESA-ECMWF ML4EOPS (2024) | 
+    <a class="publication-url" href="./KelpNet_rev2_online.pdf" target="_blank">Full text <i class="fa-solid fa-lock-open"></i></a> | <a href="https://github.com/mpierzyna/kelpnet" target="_blank">Code</a>
+</div>
+
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content">
+  <div class="publication-header-img">
+      <img src="https://maximilian-pierzyna.de/research/2024a_kelpnet/kelpnet_header.jpg" alt="kelpnet_header.jpg">
+      <div>Figure: kelpnet_header.jpg</div>
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation" href="https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/"></a>
+
+<p>Kelp forests are critical for marine ecosystems.
+They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
+We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
+We train parallel image classification and segmentation models to achieve robust kelp predictions.
+Both model types are created as ensembles of 25 members producing probabilistic outputs.
+A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
+Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &ldquo;KelpWanted&rdquo; machine learning competition (#38/671, 3.88% below winning solution).</p>
+<p><em>This work was an entry for the <a href="https://www.drivendata.org/competitions/255/kelp-forest-segmentation/">&ldquo;KelpWanted&rdquo; DrivenData machine learning competition</a>
+and was presented as a poster at the 2024 edition of the ESA-ECMWF Machine Learning for Earth System Observation and Prediction (ML4EOPS, <a href="https://www.ml4esop.esa.int">https://www.ml4esop.esa.int</a>) workshop.</em></p>
+<h2 id="poster">Poster<a hidden class="anchor" aria-hidden="true" href="#poster">#</a></h2>
+<p><img loading="lazy" src="KelpNet_rev2_thumb.png" alt="KelpNet poster"  />
+</p>
+<p>High-resolution version of poster: <a href="./KelpNet_rev2_online.pdf">pdf, 3MB</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://maximilian-pierzyna.de/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="https://maximilian-pierzyna.de/tags/earth-observation/">Earth Observation</a></li>
+    </ul>
+  </footer>
 </article>
     </main>
     
