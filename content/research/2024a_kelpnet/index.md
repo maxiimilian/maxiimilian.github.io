@@ -8,6 +8,7 @@ resources:
 - name: header
   src: kelpnet_header.jpg
 
+pubKey: 2024a_kelp
 pubJournal: ESA-ECMWF ML4EOPS
 pubYear: 2024
 pubCode: https://github.com/mpierzyna/kelpnet
@@ -29,6 +30,8 @@ Our approach yields a high accuracy with a mean dice score of 0.7047 on test dat
 _This work was an entry for the ["KelpWanted" DrivenData machine learning competition](https://www.drivendata.org/competitions/255/kelp-forest-segmentation/)
 and was presented as a poster at the 2024 edition of the ESA-ECMWF Machine Learning for Earth System Observation and Prediction (ML4EOPS, https://www.ml4esop.esa.int) workshop._
 
-High-resolution version of poster: [pdf, 3MB](./KelpNet_rev2_online.pdf)
+## Poster
 
 ![KelpNet poster](KelpNet_rev2_thumb.png)
+
+High-resolution version of poster: [pdf, 3MB](./KelpNet_rev2_online.pdf)

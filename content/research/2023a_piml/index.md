@@ -9,6 +9,7 @@ resources:
   src: 2023a_piml_methodology.png
   title: "The two components of our $\\Pi$-ML approach: Combination of dimensional variables into non-dimensional $\\Pi$-variables and the subsequent XGBoost ensemble training."
 
+pubKey: 2023a_piml
 pubJournal: Optics Letters
 pubYear: 2023
 pubUrl: https://doi.org/10.1364/OL.492652

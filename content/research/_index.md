@@ -10,4 +10,4 @@ My research goal is to estimate turbulent fluctuations of the refractive index i
 These fluctuations cause problems in numerous fields, such as astronomy or free-space optical (laser) communication. 
 To overcome these issues, reliable and accurate optical turbulence models are needed.
 
-## Publications
+## Work

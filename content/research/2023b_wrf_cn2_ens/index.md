@@ -9,6 +9,7 @@ resources:
   src: 2023b_wrf_cn2_ens.jpg
   title: "Ensemble $C_n^2$ predictions from Weather Research and Forecasting model compared to observed $C_n^2$ from two scintillometers."
 
+pubKey: 2023b_wrf_cn2_ens
 pubJournal: Environmental Effects on Light Propagation and Adaptive Systems VI
 pubYear: 2023
 pubUrl: https://doi.org/10.1117/12.2680997

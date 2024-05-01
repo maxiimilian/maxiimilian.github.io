@@ -9,6 +9,7 @@ resources:
   src: 2021_drop_impact.png
   title: Schematic of our three-step data-driven approach.
 
+pubKey: 2021_drop_impact
 pubJournal: Physics of Fluids
 pubYear: 2021
 pubUrl: https://aip.scitation.org/doi/10.1063/5.0076427
