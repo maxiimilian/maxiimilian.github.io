@@ -71,6 +71,15 @@ Your name Your email address Subject Your message Please note that this contact 
     </item>
     
     <item>
+      <title>Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations</title>
+      <link>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
+      <description>For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown.</description>
+    </item>
+    
+    <item>
       <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring</title>
       <link>https://maximilian-pierzyna.de/research/2024a_kelpnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
