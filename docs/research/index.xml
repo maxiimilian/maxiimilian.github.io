@@ -51,5 +51,14 @@
       <description>Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.</description>
     </item>
     
+    <item>
+      <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
+      <link>https://maximilian-pierzyna.de/research/2024c_otclim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
+      <description>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&amp;rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.</description>
+    </item>
+    
   </channel>
 </rss>

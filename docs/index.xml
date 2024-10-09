@@ -80,6 +80,15 @@ Your name Your email address Subject Your message Please note that this contact 
     </item>
     
     <item>
+      <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
+      <link>https://maximilian-pierzyna.de/research/2024c_otclim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
+      <description>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&amp;rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.</description>
+    </item>
+    
+    <item>
       <title>Zoom</title>
       <link>https://maximilian-pierzyna.de/zoom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
