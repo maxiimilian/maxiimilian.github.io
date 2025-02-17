@@ -7,7 +7,14 @@
 <meta name="robots" content="index, follow">
 <title>Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations | Maximilian Pierzyna</title>
 <meta name="keywords" content="Mesoscale Modelling, Optical Turbulence">
-<meta name="description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown.">
+<meta name="description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
+Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
+If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
+Even though various such parameterizations exist in the literature, their relative performance is unknown.
+We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
+Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
+The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
@@ -20,6 +27,7 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,15 +67,30 @@
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta property="og:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations" />
-<meta property="og:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown." />
+<meta property="og:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
+Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
+If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
+Even though various such parameterizations exist in the literature, their relative performance is unknown.
+We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
+Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
+The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/" /><meta property="article:section" content="research" />
+<meta property="og:url" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/" /><meta property="og:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg"/><meta property="article:section" content="research" />
 
 
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg"/>
 <meta name="twitter:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations"/>
-<meta name="twitter:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown."/>
+<meta name="twitter:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
+Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
+If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
+Even though various such parameterizations exist in the literature, their relative performance is unknown.
+We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
+Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
+The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling."/>
 
 
 <script type="application/ld+json">
@@ -96,7 +119,7 @@
   "@type": "BlogPosting",
   "headline": "Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations",
   "name": "Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations",
-  "description": "For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown.",
+  "description": "For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown. We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization. Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers. The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer. We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.\n",
   "keywords": [
     "Mesoscale Modelling", "Optical Turbulence"
   ],
@@ -161,9 +184,16 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
             <li>
                 <a href="https://maximilian-pierzyna.de/research/" title="Research">
                     <span>Research</span>
@@ -218,7 +248,7 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

@@ -19,6 +19,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://maximilian-pierzyna.de/tags/machine-learning/index.xml">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/tags/machine-learning/">
 <noscript>
     <style>
         #theme-toggle,
@@ -108,9 +109,16 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
             <li>
                 <a href="https://maximilian-pierzyna.de/research/" title="Research">
                     <span>Research</span>
@@ -132,7 +140,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$....</p>
+    <p>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$. For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.
+...</p>
   </div>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to $\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer" href="https://maximilian-pierzyna.de/research/2023a_piml/"></a>
@@ -144,7 +153,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>We propose a data-driven threshold model to redefine the boundary between deposition and splashing for drop impact on dry smooth surfaces. The starting point is the collection and digitization of multiple experimental sources with varying impact conditions. The model is based on the theory of Riboux and Gordillo [Riboux and Gordillo, “Experiments of drops impacting a smooth solid surface: A model of the critical impact speed for drop splashing,” Phys. Rev....</p>
+    <p>We propose a data-driven threshold model to redefine the boundary between deposition and splashing for drop impact on dry smooth surfaces. The starting point is the collection and digitization of multiple experimental sources with varying impact conditions. The model is based on the theory of Riboux and Gordillo [Riboux and Gordillo, “Experiments of drops impacting a smooth solid surface: A model of the critical impact speed for drop splashing,” Phys. Rev. Lett. 113, 024507 (2014)] and is obtained by an uncertainty quantification analysis coupled with machine learning. The uncertainty quantification analysis elucidates the relevance of the impact condition uncertainties when estimating the splashing parameter. The proposed threshold model is trained using a support vector machine algorithm variant that includes uncertainty as a hyperparameter. This threshold model is generalized by complexity reduction and is eightfold cross-validated on the reference data. The results reveal a dependency of the splashing threshold on the impact velocity, the liquid viscosity, the surface tension, and the gas density. Detailed quantification of the prediction performance and a comparison with state-of-the-art models show that the proposed threshold model is the most accurate model to describe the boundaries between deposition and splashing for a wide range of impact conditions. The simplicity and accuracy of this model make it an alternative to existing approaches.
+...</p>
   </div>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to Data-driven splashing threshold model for drop impact on dry smooth surfaces" href="https://maximilian-pierzyna.de/research/2021_drop_impact/"></a>
@@ -156,7 +166,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs....</p>
+    <p>Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs. A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions. Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData “KelpWanted” machine learning competition (#38/671, 3.88% below winning solution).
+...</p>
   </div>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring" href="https://maximilian-pierzyna.de/research/2024a_kelpnet/"></a>
@@ -168,7 +179,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM’s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization....</p>
+    <p>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM’s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization. Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models. Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies. A feature importance analysis confirms the physical consistency of the trained models. It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data. OTCliM’s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.
+...</p>
   </div>
   <footer class="entry-footer"></footer>
   <a class="entry-link" aria-label="post link to OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting" href="https://maximilian-pierzyna.de/research/2024c_otclim/"></a>
@@ -176,7 +188,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

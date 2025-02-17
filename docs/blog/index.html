@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Earth Observation | Maximilian Pierzyna</title>
+<title>Blog | Maximilian Pierzyna</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Blog - Maximilian Pierzyna">
 <meta name="author" content="">
-<link rel="canonical" href="https://maximilian-pierzyna.de/tags/earth-observation/">
+<link rel="canonical" href="https://maximilian-pierzyna.de/blog/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://maximilian-pierzyna.de/tags/earth-observation/index.xml">
-<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/tags/earth-observation/">
+<link rel="alternate" type="application/rss+xml" href="https://maximilian-pierzyna.de/blog/index.xml">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/blog/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,15 +58,30 @@
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="Earth Observation" />
+<meta property="og:title" content="Blog" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/tags/earth-observation/" />
+<meta property="og:url" content="https://maximilian-pierzyna.de/blog/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Earth Observation"/>
+<meta name="twitter:title" content="Blog"/>
 <meta name="twitter:description" content=""/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blog",
+      "item": "https://maximilian-pierzyna.de/blog/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -116,7 +131,7 @@
         <ul id="menu">
             <li>
                 <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
-                    <span>Blog</span>
+                    <span class="active">Blog</span>
                 </a>
             </li>
             <li>
@@ -130,21 +145,22 @@
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Earth Observation
+    Blog
   </h1>
 </header>
 
-<article class="post-entry tag-entry"> 
+<article class="post-entry"> 
   <header class="entry-header">
-    <h2>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring
+    <h2>
     </h2>
   </header>
   <div class="entry-content">
-    <p>Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs. A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions. Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData “KelpWanted” machine learning competition (#38/671, 3.88% below winning solution).
+    <p>Submitting Python scripts as Slurm array Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.
+Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.
 ...</p>
   </div>
   <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring" href="https://maximilian-pierzyna.de/research/2024a_kelpnet/"></a>
+  <a class="entry-link" aria-label="post link to " href="https://maximilian-pierzyna.de/blog/slurm_python_array/"></a>
 </article>
     </main>
     

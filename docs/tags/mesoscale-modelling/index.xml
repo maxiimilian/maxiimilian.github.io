@@ -12,7 +12,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
-      <description>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.</description>
+      <description>&lt;p&gt;Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+but they are prone to disturbance through atmospheric processes such as optical turbulence.
+Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
+Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
+However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
+To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
+We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
+We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
+We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,7 +29,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
-      <description>For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown.</description>
+      <description>&lt;p&gt;For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
+Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
+If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
+Even though various such parameterizations exist in the literature, their relative performance is unknown.
+We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
+Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
+The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -8,11 +8,59 @@
     <language>en</language><atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://maximilian-pierzyna.de/blog/slurm_python_array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/blog/slurm_python_array/</guid>
+      <description>&lt;h1 id=&#34;submitting-python-scripts-as-slurm-array&#34;&gt;Submitting Python scripts as Slurm array&lt;/h1&gt;
+&lt;p&gt;Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
+These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
+&lt;p&gt;Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the &lt;code&gt;$SLURM_ARRAY_TASK_ID&lt;/code&gt;, which is the iteration variable of your loop.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://maximilian-pierzyna.de/card/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/card/</guid>
-      <description> Maximilian Pierzyna PhD Researcher Optical turbulence and satellite communication m.pierzyna@tudelft.nl +31 6 123 345 mail linkedin vcard Tip: Click the xx button above to add my contact details straight to your phone book. QR CODE </description>
+      <description>&lt;div class=&#34;business-card&#34;&gt;
+    &lt;div class=&#34;business-card-content&#34;&gt;
+        &lt;span style=&#34;font-size: 1.5em; font-weight: 700&#34;&gt;Maximilian Pierzyna&lt;/span&gt;&lt;br/&gt;
+        PhD Researcher &lt;br /&gt;
+        Optical turbulence and satellite communication &lt;br /&gt;
+        m.pierzyna@tudelft.nl &lt;br /&gt;
+        +31 6 123 345
+
+        &lt;div class=&#34;business-card-icons&#34;&gt;
+            &lt;!-- Mail --&gt;
+            &lt;a href=&#34;mailto:m.pierzyna@tudelft.nl&#34;&gt;
+                mail
+            &lt;/a&gt;
+            &lt;!-- Linkedin --&gt;
+            &lt;a href=&#34;mailto:m.pierzyna@tudelft.nl&#34;&gt;
+                linkedin
+            &lt;/a&gt;
+            &lt;!-- vcard --&gt;
+            &lt;a href=&#34;https://maximilian-pierzyna.de/pierzyna_maximilian.vcf&#34;&gt;
+                vcard
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;span style=&#34;font-size: .6em&#34;&gt;Tip: Click the xx button above to add my contact details straight to your phone book.&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;flip-card&#34;&gt;
+        &lt;div class=&#34;flip-card-inner&#34;&gt;
+            &lt;div class=&#34;flip-card-front&#34;&gt;
+                &lt;img src=&#34;https://maximilian-pierzyna.de/img/foto_me.jpg&#34; /&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;flip-card-back&#34;&gt;
+                QR CODE
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style=&#34;clear: both&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -21,7 +69,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2023a_piml/</guid>
-      <description>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.</description>
+      <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
+Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
+In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
+Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
+For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,7 +82,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
-      <description>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.</description>
+      <description>&lt;p&gt;Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+but they are prone to disturbance through atmospheric processes such as optical turbulence.
+Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
+Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
+However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
+To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
+We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
+We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
+We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,7 +99,11 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/agenda/</guid>
-      <description> Below you can see my availability for meetings. If you do not see an embedded Outlook calendar, please click here. </description>
+      <description>&lt;p&gt;
+    Below you can see my availability for meetings. 
+    If you do not see an embedded Outlook calendar, please click &lt;a href=&#34;https://outlook.office365.com/calendar/published/7775c2b06e5a45198420cc77320d113d@tudelft.nl/84a899c1c38a4b259308a091b4e5db2f14914976016098583698/calendar.html&#34;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;iframe src=&#34;https://outlook.office365.com/calendar/published/7775c2b06e5a45198420cc77320d113d@tudelft.nl/84a899c1c38a4b259308a091b4e5db2f14914976016098583698/calendar.html&#34; style=&#34;width: 100%; height: 800px;&#34;&gt;&lt;/iframe&gt;</description>
     </item>
     
     <item>
@@ -48,8 +112,25 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/contact/</guid>
-      <description>I am happy to receive questions or inquiries via the contact form below. Alternatively, you can download my virtual business card (vCard, 1KB) with my contact details.
-Your name Your email address Subject Your message Please note that this contact form uses Formspree to process the contact request. This external service uses servers outside the EU. Until the contact form is submitted, no data are transmitted to Formspree. By using this form you agree to your data being processed by Formspree.</description>
+      <description>&lt;p&gt;I am happy to receive questions or inquiries via the contact form below. Alternatively, you can download my &lt;a href=&#34;https://maximilian-pierzyna.de/pierzyna_maximilian.vcf&#34;&gt;virtual business card (vCard, 1KB)&lt;/a&gt; with my contact details.&lt;/p&gt;
+&lt;form name=&#34;contact&#34; method=&#34;POST&#34; action=&#34;https://formspree.io/f/xyybddvj&#34;&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label for=&#34;name&#34; class=&#34;required&#34;&gt;Your name&lt;/label&gt;
+        &lt;input type=&#34;text&#34; name=&#34;name&#34; class=&#34;form-control&#34; required/&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label for=&#34;_replyto&#34; class=&#34;required&#34;&gt;Your email address&lt;/label&gt;
+        &lt;input type=&#34;email&#34; name=&#34;_replyto&#34; class=&#34;form-control&#34; required/&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label for=&#34;subject&#34; class=&#34;required&#34;&gt;Subject&lt;/label&gt;
+        &lt;input type=&#34;text&#34; name=&#34;subject&#34; class=&#34;form-control&#34; required/&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;form-group&#34;&gt;
+        &lt;label for=&#34;message&#34; class=&#34;required&#34;&gt;Your message&lt;/label&gt;
+        &lt;textarea type=&#34;text&#34; name=&#34;message&#34; class=&#34;form-control&#34; required&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;p style=&#34;color: var(--secondary); font-size: 0.8em;&#34;&gt;Please note that this contact form uses &lt;a href=&#34;https://formspree.io/&#34;&gt;Formspree&lt;/a&gt; to process the contact request. This external service uses servers outside the EU. Until the contact form is submitted, no data are transmitted to Formspree. By using this form you agree to your data being processed by Formspree.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,7 +139,21 @@ Your name Your email address Subject Your message Please note that this contact 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2021_drop_impact/</guid>
-      <description>We propose a data-driven threshold model to redefine the boundary between deposition and splashing for drop impact on dry smooth surfaces. The starting point is the collection and digitization of multiple experimental sources with varying impact conditions. The model is based on the theory of Riboux and Gordillo [Riboux and Gordillo, &amp;ldquo;Experiments of drops impacting a smooth solid surface: A model of the critical impact speed for drop splashing,&amp;rdquo; Phys. Rev.</description>
+      <description>&lt;p&gt;We propose a data-driven threshold model to redefine the boundary between deposition and splashing
+for drop impact on dry smooth surfaces. The starting point is the collection and digitization of
+multiple experimental sources with varying impact conditions. The model is based on the theory of
+Riboux and Gordillo [Riboux and Gordillo, &amp;ldquo;Experiments of drops impacting a smooth solid surface:
+A model of the critical impact speed for drop splashing,&amp;rdquo; Phys. Rev. Lett. 113, 024507 (2014)] and
+is obtained by an uncertainty quantification analysis coupled with machine learning. The uncertainty
+quantification analysis elucidates the relevance of the impact condition uncertainties when estimating
+the splashing parameter. The proposed threshold model is trained using a support vector machine
+algorithm variant that includes uncertainty as a hyperparameter. This threshold model is generalized
+by complexity reduction and is eightfold cross-validated on the reference data. The results reveal
+a dependency of the splashing threshold on the impact velocity, the liquid viscosity, the surface
+tension, and the gas density. Detailed quantification of the prediction performance and a comparison
+with state-of-the-art models show that the proposed threshold model is the most accurate model to
+describe the boundaries between deposition and splashing for a wide range of impact conditions.
+The simplicity and accuracy of this model make it an alternative to existing approaches.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,7 +162,14 @@ Your name Your email address Subject Your message Please note that this contact 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
-      <description>For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown.</description>
+      <description>&lt;p&gt;For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
+Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
+If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
+Even though various such parameterizations exist in the literature, their relative performance is unknown.
+We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
+Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
+The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -76,7 +178,13 @@ Your name Your email address Subject Your message Please note that this contact 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2024a_kelpnet/</guid>
-      <description>Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.</description>
+      <description>&lt;p&gt;Kelp forests are critical for marine ecosystems.
+They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
+We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
+We train parallel image classification and segmentation models to achieve robust kelp predictions.
+Both model types are created as ensembles of 25 members producing probabilistic outputs.
+A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
+Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &amp;ldquo;KelpWanted&amp;rdquo; machine learning competition (#38/671, 3.88% below winning solution).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +193,15 @@ Your name Your email address Subject Your message Please note that this contact 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
-      <description>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&amp;rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.</description>
+      <description>&lt;p&gt;This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&amp;rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&amp;rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,7 +210,7 @@ Your name Your email address Subject Your message Please note that this contact 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://maximilian-pierzyna.de/zoom/</guid>
-      <description>To access my personal Zoom room, please click here.</description>
+      <description>&lt;p&gt;To access my personal Zoom room, please click &lt;a href=&#34;https://tudelft.zoom.us/j/9401991708?pwd=MUdmVWdzTTFSZzdHWXlMUFBOSEdVUT09&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

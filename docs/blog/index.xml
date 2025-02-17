@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Maximilian Pierzyna</title>
+    <link>https://maximilian-pierzyna.de/blog/</link>
+    <description>Recent content in Blog on Maximilian Pierzyna</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://maximilian-pierzyna.de/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://maximilian-pierzyna.de/blog/slurm_python_array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://maximilian-pierzyna.de/blog/slurm_python_array/</guid>
+      <description>&lt;h1 id=&#34;submitting-python-scripts-as-slurm-array&#34;&gt;Submitting Python scripts as Slurm array&lt;/h1&gt;
+&lt;p&gt;Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
+These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
+&lt;p&gt;Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the &lt;code&gt;$SLURM_ARRAY_TASK_ID&lt;/code&gt;, which is the iteration variable of your loop.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

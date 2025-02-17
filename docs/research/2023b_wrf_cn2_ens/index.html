@@ -7,7 +7,15 @@
 <meta name="robots" content="index, follow">
 <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation | Maximilian Pierzyna</title>
 <meta name="keywords" content="Mesoscale Modelling, Optical Turbulence">
-<meta name="description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.">
+<meta name="description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+but they are prone to disturbance through atmospheric processes such as optical turbulence.
+Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
+Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
+However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
+To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
+We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
+We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
+We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
@@ -20,6 +28,7 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +68,15 @@
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta property="og:title" content="A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation" />
-<meta property="og:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$." />
+<meta property="og:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+but they are prone to disturbance through atmospheric processes such as optical turbulence.
+Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
+Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
+However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
+To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
+We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
+We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
+We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/" /><meta property="article:section" content="research" />
 
@@ -67,7 +84,15 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation"/>
-<meta name="twitter:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$."/>
+<meta name="twitter:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+but they are prone to disturbance through atmospheric processes such as optical turbulence.
+Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
+Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
+However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
+To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
+We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
+We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
+We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs."/>
 
 
 <script type="application/ld+json">
@@ -96,7 +121,7 @@
   "@type": "BlogPosting",
   "headline": "A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation",
   "name": "A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation",
-  "description": "Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.",
+  "description": "Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$. However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented. To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$. We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate. We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers. We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.\n",
   "keywords": [
     "Mesoscale Modelling", "Optical Turbulence"
   ],
@@ -161,9 +186,16 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
             <li>
                 <a href="https://maximilian-pierzyna.de/research/" title="Research">
                     <span>Research</span>
@@ -218,7 +250,7 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

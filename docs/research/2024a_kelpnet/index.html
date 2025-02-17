@@ -7,7 +7,13 @@
 <meta name="robots" content="index, follow">
 <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring | Maximilian Pierzyna</title>
 <meta name="keywords" content="Machine Learning, Earth Observation">
-<meta name="description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.">
+<meta name="description" content="Kelp forests are critical for marine ecosystems.
+They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
+We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
+We train parallel image classification and segmentation models to achieve robust kelp predictions.
+Both model types are created as ensembles of 25 members producing probabilistic outputs.
+A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
+Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &ldquo;KelpWanted&rdquo; machine learning competition (#38/671, 3.88% below winning solution).">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2024a_kelpnet/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
@@ -20,6 +26,7 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/research/2024a_kelpnet/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +66,13 @@
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta property="og:title" content="KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring" />
-<meta property="og:description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs." />
+<meta property="og:description" content="Kelp forests are critical for marine ecosystems.
+They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
+We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
+We train parallel image classification and segmentation models to achieve robust kelp predictions.
+Both model types are created as ensembles of 25 members producing probabilistic outputs.
+A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
+Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &ldquo;KelpWanted&rdquo; machine learning competition (#38/671, 3.88% below winning solution)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://maximilian-pierzyna.de/research/2024a_kelpnet/" /><meta property="article:section" content="research" />
 
@@ -67,7 +80,13 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring"/>
-<meta name="twitter:description" content="Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs."/>
+<meta name="twitter:description" content="Kelp forests are critical for marine ecosystems.
+They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
+We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
+We train parallel image classification and segmentation models to achieve robust kelp predictions.
+Both model types are created as ensembles of 25 members producing probabilistic outputs.
+A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
+Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &ldquo;KelpWanted&rdquo; machine learning competition (#38/671, 3.88% below winning solution)."/>
 
 
 <script type="application/ld+json">
@@ -96,7 +115,7 @@
   "@type": "BlogPosting",
   "headline": "KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring",
   "name": "KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring",
-  "description": "Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs.",
+  "description": "Kelp forests are critical for marine ecosystems. They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution. We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery. We train parallel image classification and segmentation models to achieve robust kelp predictions. Both model types are created as ensembles of 25 members producing probabilistic outputs. A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions. Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData \u0026ldquo;KelpWanted\u0026rdquo; machine learning competition (#38/671, 3.88% below winning solution).\n",
   "keywords": [
     "Machine Learning", "Earth Observation"
   ],
@@ -161,9 +180,16 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
             <li>
                 <a href="https://maximilian-pierzyna.de/research/" title="Research">
                     <span>Research</span>
@@ -222,7 +248,7 @@ and was presented as a poster at the 2024 edition of the ESA-ECMWF Machine Learn
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

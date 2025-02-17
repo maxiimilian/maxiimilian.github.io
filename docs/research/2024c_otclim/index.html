@@ -7,7 +7,15 @@
 <meta name="robots" content="index, follow">
 <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting | Maximilian Pierzyna</title>
 <meta name="keywords" content="Machine Learning, Optical Turbulence">
-<meta name="description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.">
+<meta name="description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2024c_otclim/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
@@ -20,6 +28,7 @@
 <link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/research/2024c_otclim/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +68,15 @@
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <meta property="og:title" content="OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting" />
-<meta property="og:description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization." />
+<meta property="og:description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://maximilian-pierzyna.de/research/2024c_otclim/" /><meta property="article:section" content="research" />
 
@@ -67,7 +84,15 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting"/>
-<meta name="twitter:description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization."/>
+<meta name="twitter:description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources."/>
 
 
 <script type="application/ld+json">
@@ -96,7 +121,7 @@
   "@type": "BlogPosting",
   "headline": "OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting",
   "name": "OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting",
-  "description": "This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM\u0026rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.",
+  "description": "This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM\u0026rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization. Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models. Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies. A feature importance analysis confirms the physical consistency of the trained models. It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data. OTCliM\u0026rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.\n",
   "keywords": [
     "Machine Learning", "Optical Turbulence"
   ],
@@ -161,9 +186,16 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
             <li>
                 <a href="https://maximilian-pierzyna.de/research/" title="Research">
                     <span>Research</span>
@@ -218,7 +250,7 @@ OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one ye
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
