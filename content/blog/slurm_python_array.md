@@ -1,12 +1,15 @@
 ---
 Title: Parallelizing Python scripts with Slurm arrays
 ---
+
 Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays. 
 
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the `$SLURM_ARRAY_TASK_ID`, which is the iteration variable of your loop.
 
+Content of this article:
+{{% toc %}}
 
 ## Simple sequential for-loop with sbatch script
 
@@ -48,7 +51,7 @@ This is where Slurm can help.
 
 ## Making Slurm run the loop
 We can easily convert such a script to a Slurm array by moving the for-loop "outside of the script".
-First, our script needs to take command line arguments:
+First, our script needs to take command line arguments, so we can iterate from the outside:
 ```python
 ## process.py
 import argparse
