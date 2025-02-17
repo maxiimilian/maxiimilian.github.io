@@ -1,4 +1,6 @@
-# Submitting Python scripts as Slurm array
+---
+Title: Parallelizing Python scripts with Slurm arrays
+---
 Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays. 
@@ -8,7 +10,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 
 ## Simple sequential for-loop with sbatch script
 
-Let's look at an example. Assume you have the following simple Python script, which processes a bunch of files.
+Let's look at a sequential example first. Assume you have the following simple Python script, which processes a bunch of files.
 ```python
 ## process.py
 FILES = [
@@ -68,12 +70,12 @@ args = parser.parse_args()
 process(FILES[args.i])
 ```
 
-We can now process the i-th file (e.g., the third file) by running the following command
+The i-th file (e.g., the third file) can now be processed by running the following command:
 
 ```bash
 python process.py 3
 ```
-Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable `$SLURM_ARRAY_TASK_ID`. This variable will be populated by Slurm in a later step. So, the updated job script looks like this:
+Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable `$SLURM_ARRAY_TASK_ID`. This variable will be populated by Slurm in the final step, so the updated job script looks like this:
 ```bash
 ## process.job.sh
 #SBATCH --job-name=processing
@@ -84,7 +86,7 @@ Next, the job script needs a small modification. Instead of providing a fixed nu
 python process.py $SLURM_ARRAY_TASK_ID
 ```
 
-Finally, we need to tell Slurm to run the loop for us by submitting this script as an array:
+Finally, we need to tell Slurm to run the loop for us by submitting this job as an array:
 ```bash
 sbatch --array=0-3 process.job.sh
 ```
@@ -104,20 +106,21 @@ Assume, you want to train a machine learning model with a pre-defined number of 
 You can list these settings in a list similar to `FILES` and pass the settings as arguments to a `train()` function similar to the `process()` call in this example.
 Sometimes, it is also needed to run the same experiment in a randomized fashion (e.g., Monte Carlo simulations or training of a machine learning ensemble). 
 In that case, you can simply provide the `i` argument, i.e., the `$SLURM_ARRAY_TASK_ID`, as random seed for your random number generator.
+As a result, each script will have its own chain of random numbers while still being reproducible through a fixed seed.
 
 On a more practical note, if submitting hunderts of jobs through an array, it might be polite to limit the number of jobs that can run in parallel. 
 In principle, the scheduler (Slurm) will not run more jobs than it has physical resources available.
-However, if you share a partition with your department, you might still exhaust all the available resources to your colleagues, so none of your colleagues can run jobs anymore.
-For example, to process 100 files but only 10 of them in parallel, we can run
+However, if you share a partition with your department, you might still exhaust all the resources available to your colleagues -- so, none of them can run jobs anymore.
+To avoid this, we can, for example, process 100 files but only 10 of them in parallel by running
 ```bash
 sbatch --array=0-99%10 process.job.sh
 ```
-Note the `%10` in the array definition, which defines the number of allowed parallel jobs.
+The `%10` in the array definition defines the number of allowed parallel jobs, here, ten.
 
 ## A note on numpy
-Numpy is a popular scientific computing library in Python. It is highly optimized and will run many functions in parallel by itself.
+Numpy is a popular scientific computing library in Python. It is highly optimized and will run many operations in parallel by itself.
 However, numpy sometimes (always?) does not detect when it is run on a high-performance computer (HPC) where it only has access to a subset of resources. 
-Say, a compute node has 64 cores, but you only submit a job requesting 8 cores. 
+Say, a compute node has 64 cores, but you submit a job requesting only 8 cores. 
 Numpy might still assume that it can use all 64 cores when, in fact, it cannot. 
 The result might be a slow down because numpy starts 64 parallel activities (threads), which have to compete for the eight "real slots" of parallel execution.
 To avoid this issue, we can tell numpy to only use as many cores as the job requested.

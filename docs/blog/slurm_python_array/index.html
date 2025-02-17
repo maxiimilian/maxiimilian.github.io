@@ -5,10 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Maximilian Pierzyna</title>
+<title>Parallelizing Python scripts with Slurm arrays | Maximilian Pierzyna</title>
 <meta name="keywords" content="">
-<meta name="description" content="Submitting Python scripts as Slurm array
-Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+<meta name="description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.">
@@ -63,9 +62,8 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="Submitting Python scripts as Slurm array
-Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+<meta property="og:title" content="Parallelizing Python scripts with Slurm arrays" />
+<meta property="og:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop." />
@@ -75,9 +73,8 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Submitting Python scripts as Slurm array
-Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+<meta name="twitter:title" content="Parallelizing Python scripts with Slurm arrays"/>
+<meta name="twitter:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop."/>
@@ -97,7 +94,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "",
+      "name": "Parallelizing Python scripts with Slurm arrays",
       "item": "https://maximilian-pierzyna.de/blog/slurm_python_array/"
     }
   ]
@@ -107,14 +104,14 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
-  "name": "",
-  "description": "Submitting Python scripts as Slurm array Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.\nSubmitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.\n",
+  "headline": "Parallelizing Python scripts with Slurm arrays",
+  "name": "Parallelizing Python scripts with Slurm arrays",
+  "description": "Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.\nSubmitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.\n",
   "keywords": [
     
   ],
-  "articleBody": "Submitting Python scripts as Slurm array Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.\nSubmitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.\nSimple sequential for-loop with sbatch script Let’s look at an example. Assume you have the following simple Python script, which processes a bunch of files.\n## process.py FILES = [ \"data_01.nc\", \"data_02.nc\", \"data_03.nc\", \"data_04.nc\", ] # Pythonic for-loop for f in FILES: process(f) # Alternative for-loop, more common in C-style languages for i in range(len(FILES)): process(FILES[i]) We can run this script by creating a simple accompanying Slurm job script.\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py Finally, the job is submitted with sbatch process.job.sh.\nThe disadvantage of this method is that we do not utilize the fact that each loop execution is independent of the previous one or the one after. In other words, all files could be processed in parallel by running the Python script multiple times. This is where Slurm can help.\nMaking Slurm run the loop We can easily convert such a script to a Slurm array by moving the for-loop “outside of the script”. First, our script needs to take command line arguments:\n## process.py import argparse FILES = [ \"data_01.nc\", \"data_02.nc\", \"data_03.nc\", \"data_04.nc\", ] # Parse arguments parser = argparse.ArgumentParser() parser.add_argument(\"i\", help=\"Number of file in FILES to process\") args = parser.parse_args() # Run post-processing for i-th file process(FILES[args.i]) We can now process the i-th file (e.g., the third file) by running the following command\npython process.py 3 Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable $SLURM_ARRAY_TASK_ID. This variable will be populated by Slurm in a later step. So, the updated job script looks like this:\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py $SLURM_ARRAY_TASK_ID Finally, we need to tell Slurm to run the loop for us by submitting this script as an array:\nsbatch --array=0-3 process.job.sh This will automatically submit the script four times where the $SLURM_ARRAY_TASK_ID is increased from 0 to 3. In other words, Slurm will run\npython process.py 0 python process.py 1 python process.py 2 python process.py 3 Each job will receive the ressources specified in the job script. This method can be applied very widely and not just for file processing. Assume, you want to train a machine learning model with a pre-defined number of settings. You can list these settings in a list similar to FILES and pass the settings as arguments to a train() function similar to the process() call in this example. Sometimes, it is also needed to run the same experiment in a randomized fashion (e.g., Monte Carlo simulations or training of a machine learning ensemble). In that case, you can simply provide the i argument, i.e., the $SLURM_ARRAY_TASK_ID, as random seed for your random number generator.\nOn a more practical note, if submitting hunderts of jobs through an array, it might be polite to limit the number of jobs that can run in parallel. In principle, the scheduler (Slurm) will not run more jobs than it has physical resources available. However, if you share a partition with your department, you might still exhaust all the available resources to your colleagues, so none of your colleagues can run jobs anymore. For example, to process 100 files but only 10 of them in parallel, we can run\nsbatch --array=0-99%10 process.job.sh Note the %10 in the array definition, which defines the number of allowed parallel jobs.\nA note on numpy Numpy is a popular scientific computing library in Python. It is highly optimized and will run many functions in parallel by itself. However, numpy sometimes (always?) does not detect when it is run on a high-performance computer (HPC) where it only has access to a subset of resources. Say, a compute node has 64 cores, but you only submit a job requesting 8 cores. Numpy might still assume that it can use all 64 cores when, in fact, it cannot. The result might be a slow down because numpy starts 64 parallel activities (threads), which have to compete for the eight “real slots” of parallel execution. To avoid this issue, we can tell numpy to only use as many cores as the job requested.\nInstead of simply running your Python script like above…\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py $SLURM_ARRAY_TASK_ID … we modify it like this:\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ VECLIB_MAXIMUM_THREADS=$SLURM_CPUS_PER_TASK \\ NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ python process.py $SLURM_ARRAY_TASK_ID Don’t get scared by this slightly intimidating call of python. Prefixing the python command like this tells the different underlying high-performance parts of Python (OpenMP, OpenBLAS, MathKernelLibrary MKL, VecLib, …) to only use $SLURM_CPUS_PER_TASK. That variable will get populated by Slurm with what is given in the script, here, 8 cores.\n",
-  "wordCount" : "885",
+  "articleBody": "Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.\nSubmitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.\nSimple sequential for-loop with sbatch script Let’s look at a sequential example first. Assume you have the following simple Python script, which processes a bunch of files.\n## process.py FILES = [ \"data_01.nc\", \"data_02.nc\", \"data_03.nc\", \"data_04.nc\", ] # Pythonic for-loop for f in FILES: process(f) # Alternative for-loop, more common in C-style languages for i in range(len(FILES)): process(FILES[i]) We can run this script by creating a simple accompanying Slurm job script.\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py Finally, the job is submitted with sbatch process.job.sh.\nThe disadvantage of this method is that we do not utilize the fact that each loop execution is independent of the previous one or the one after. In other words, all files could be processed in parallel by running the Python script multiple times. This is where Slurm can help.\nMaking Slurm run the loop We can easily convert such a script to a Slurm array by moving the for-loop “outside of the script”. First, our script needs to take command line arguments:\n## process.py import argparse FILES = [ \"data_01.nc\", \"data_02.nc\", \"data_03.nc\", \"data_04.nc\", ] # Parse arguments parser = argparse.ArgumentParser() parser.add_argument(\"i\", help=\"Number of file in FILES to process\") args = parser.parse_args() # Run post-processing for i-th file process(FILES[args.i]) The i-th file (e.g., the third file) can now be processed by running the following command:\npython process.py 3 Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable $SLURM_ARRAY_TASK_ID. This variable will be populated by Slurm in the final step, so the updated job script looks like this:\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py $SLURM_ARRAY_TASK_ID Finally, we need to tell Slurm to run the loop for us by submitting this job as an array:\nsbatch --array=0-3 process.job.sh This will automatically submit the script four times where the $SLURM_ARRAY_TASK_ID is increased from 0 to 3. In other words, Slurm will run\npython process.py 0 python process.py 1 python process.py 2 python process.py 3 Each job will receive the ressources specified in the job script. This method can be applied very widely and not just for file processing. Assume, you want to train a machine learning model with a pre-defined number of settings. You can list these settings in a list similar to FILES and pass the settings as arguments to a train() function similar to the process() call in this example. Sometimes, it is also needed to run the same experiment in a randomized fashion (e.g., Monte Carlo simulations or training of a machine learning ensemble). In that case, you can simply provide the i argument, i.e., the $SLURM_ARRAY_TASK_ID, as random seed for your random number generator. As a result, each script will have its own chain of random numbers while still being reproducible through a fixed seed.\nOn a more practical note, if submitting hunderts of jobs through an array, it might be polite to limit the number of jobs that can run in parallel. In principle, the scheduler (Slurm) will not run more jobs than it has physical resources available. However, if you share a partition with your department, you might still exhaust all the resources available to your colleagues – so, none of them can run jobs anymore. To avoid this, we can, for example, process 100 files but only 10 of them in parallel by running\nsbatch --array=0-99%10 process.job.sh The %10 in the array definition defines the number of allowed parallel jobs, here, ten.\nA note on numpy Numpy is a popular scientific computing library in Python. It is highly optimized and will run many operations in parallel by itself. However, numpy sometimes (always?) does not detect when it is run on a high-performance computer (HPC) where it only has access to a subset of resources. Say, a compute node has 64 cores, but you submit a job requesting only 8 cores. Numpy might still assume that it can use all 64 cores when, in fact, it cannot. The result might be a slow down because numpy starts 64 parallel activities (threads), which have to compete for the eight “real slots” of parallel execution. To avoid this issue, we can tell numpy to only use as many cores as the job requested.\nInstead of simply running your Python script like above…\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script python process.py $SLURM_ARRAY_TASK_ID … we modify it like this:\n## process.job.sh #SBATCH --job-name=processing #SBATCH --ntasks=8 #SBATCH --mem-per-cpu=4000 # Run the script OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ VECLIB_MAXIMUM_THREADS=$SLURM_CPUS_PER_TASK \\ NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK \\ python process.py $SLURM_ARRAY_TASK_ID Don’t get scared by this slightly intimidating call of python. Prefixing the python command like this tells the different underlying high-performance parts of Python (OpenMP, OpenBLAS, MathKernelLibrary MKL, VecLib, …) to only use $SLURM_CPUS_PER_TASK. That variable will get populated by Slurm with what is given in the script, here, 8 cores.\n",
+  "wordCount" : "905",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -198,19 +195,18 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
   <header class="post-header">
     
     <h1 class="post-title">
-      
+      Parallelizing Python scripts with Slurm arrays
     </h1>
     <div class="post-meta">
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="submitting-python-scripts-as-slurm-array">Submitting Python scripts as Slurm array<a hidden class="anchor" aria-hidden="true" href="#submitting-python-scripts-as-slurm-array">#</a></h1>
-<p>Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
+  <div class="post-content"><p>Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.</p>
 <p>Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the <code>$SLURM_ARRAY_TASK_ID</code>, which is the iteration variable of your loop.</p>
 <h2 id="simple-sequential-for-loop-with-sbatch-script">Simple sequential for-loop with sbatch script<a hidden class="anchor" aria-hidden="true" href="#simple-sequential-for-loop-with-sbatch-script">#</a></h2>
-<p>Let&rsquo;s look at an example. Assume you have the following simple Python script, which processes a bunch of files.</p>
+<p>Let&rsquo;s look at a sequential example first. Assume you have the following simple Python script, which processes a bunch of files.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## process.py</span>
 </span></span><span style="display:flex;"><span>FILES <span style="color:#f92672">=</span> [
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;data_01.nc&#34;</span>,
@@ -259,9 +255,9 @@ First, our script needs to take command line arguments:</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Run post-processing for i-th file</span>
 </span></span><span style="display:flex;"><span>process(FILES[args<span style="color:#f92672">.</span>i])
-</span></span></code></pre></div><p>We can now process the i-th file (e.g., the third file) by running the following command</p>
+</span></span></code></pre></div><p>The i-th file (e.g., the third file) can now be processed by running the following command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python process.py <span style="color:#ae81ff">3</span>
-</span></span></code></pre></div><p>Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable <code>$SLURM_ARRAY_TASK_ID</code>. This variable will be populated by Slurm in a later step. So, the updated job script looks like this:</p>
+</span></span></code></pre></div><p>Next, the job script needs a small modification. Instead of providing a fixed number as argument to the script like above, we provide the variable <code>$SLURM_ARRAY_TASK_ID</code>. This variable will be populated by Slurm in the final step, so the updated job script looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">## process.job.sh</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#SBATCH --job-name=processing</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#SBATCH --ntasks=8</span>
@@ -269,7 +265,7 @@ First, our script needs to take command line arguments:</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Run the script</span>
 </span></span><span style="display:flex;"><span>python process.py $SLURM_ARRAY_TASK_ID
-</span></span></code></pre></div><p>Finally, we need to tell Slurm to run the loop for us by submitting this script as an array:</p>
+</span></span></code></pre></div><p>Finally, we need to tell Slurm to run the loop for us by submitting this job as an array:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sbatch --array<span style="color:#f92672">=</span>0-3 process.job.sh
 </span></span></code></pre></div><p>This will automatically submit the script four times where the <code>$SLURM_ARRAY_TASK_ID</code> is increased from 0 to 3.
 In other words, Slurm will run</p>
@@ -282,17 +278,18 @@ This method can be applied very widely and not just for file processing.
 Assume, you want to train a machine learning model with a pre-defined number of settings.
 You can list these settings in a list similar to <code>FILES</code> and pass the settings as arguments to a <code>train()</code> function similar to the <code>process()</code> call in this example.
 Sometimes, it is also needed to run the same experiment in a randomized fashion (e.g., Monte Carlo simulations or training of a machine learning ensemble).
-In that case, you can simply provide the <code>i</code> argument, i.e., the <code>$SLURM_ARRAY_TASK_ID</code>, as random seed for your random number generator.</p>
+In that case, you can simply provide the <code>i</code> argument, i.e., the <code>$SLURM_ARRAY_TASK_ID</code>, as random seed for your random number generator.
+As a result, each script will have its own chain of random numbers while still being reproducible through a fixed seed.</p>
 <p>On a more practical note, if submitting hunderts of jobs through an array, it might be polite to limit the number of jobs that can run in parallel.
 In principle, the scheduler (Slurm) will not run more jobs than it has physical resources available.
-However, if you share a partition with your department, you might still exhaust all the available resources to your colleagues, so none of your colleagues can run jobs anymore.
-For example, to process 100 files but only 10 of them in parallel, we can run</p>
+However, if you share a partition with your department, you might still exhaust all the resources available to your colleagues &ndash; so, none of them can run jobs anymore.
+To avoid this, we can, for example, process 100 files but only 10 of them in parallel by running</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sbatch --array<span style="color:#f92672">=</span>0-99%10 process.job.sh
-</span></span></code></pre></div><p>Note the <code>%10</code> in the array definition, which defines the number of allowed parallel jobs.</p>
+</span></span></code></pre></div><p>The <code>%10</code> in the array definition defines the number of allowed parallel jobs, here, ten.</p>
 <h2 id="a-note-on-numpy">A note on numpy<a hidden class="anchor" aria-hidden="true" href="#a-note-on-numpy">#</a></h2>
-<p>Numpy is a popular scientific computing library in Python. It is highly optimized and will run many functions in parallel by itself.
+<p>Numpy is a popular scientific computing library in Python. It is highly optimized and will run many operations in parallel by itself.
 However, numpy sometimes (always?) does not detect when it is run on a high-performance computer (HPC) where it only has access to a subset of resources.
-Say, a compute node has 64 cores, but you only submit a job requesting 8 cores.
+Say, a compute node has 64 cores, but you submit a job requesting only 8 cores.
 Numpy might still assume that it can use all 64 cores when, in fact, it cannot.
 The result might be a slow down because numpy starts 64 parallel activities (threads), which have to compete for the eight &ldquo;real slots&rdquo; of parallel execution.
 To avoid this issue, we can tell numpy to only use as many cores as the job requested.</p>
