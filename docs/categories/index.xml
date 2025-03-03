@@ -4,7 +4,8 @@
     <title>Categories on Maximilian Pierzyna</title>
     <link>https://maximilian-pierzyna.de/categories/</link>
     <description>Recent content in Categories on Maximilian Pierzyna</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://maximilian-pierzyna.de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <atom:link href="https://maximilian-pierzyna.de/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -14,9 +14,7 @@ Through a systematic feature importance analysis, we identify the normalized var
 For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2023a_piml/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
@@ -42,7 +40,7 @@ For statistical robustness, we train an ensemble of models which yields high per
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -63,24 +61,22 @@ For statistical robustness, we train an ensemble of models which yields high per
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer" />
-<meta property="og:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
-Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
-In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
-Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
-For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/research/2023a_piml/" /><meta property="article:section" content="research" />
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer"/>
+<meta property="og:url" content="https://maximilian-pierzyna.de/research/2023a_piml/">
+  <meta property="og:site_name" content="Maximilian Pierzyna">
+  <meta property="og:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer">
+  <meta property="og:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$. For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="research">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Optical Turbulence">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer">
 <meta name="twitter:description" content="Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
 In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
 Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
-For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$."/>
+For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.">
 
 
 <script type="application/ld+json">
@@ -138,13 +134,10 @@ For statistical robustness, we train an ensemble of models which yields high per
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -154,7 +147,7 @@ For statistical robustness, we train an ensemble of models which yields high per
         <div class="logo">
             <a href="https://maximilian-pierzyna.de/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -174,8 +167,6 @@ For statistical robustness, we train an ensemble of models which yields high per
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -235,7 +226,8 @@ For statistical robustness, we train an ensemble of models which yields high per
     </main>
     
 <footer class="footer">
-    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+        <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -318,11 +310,9 @@ For statistical robustness, we train an ensemble of models which yields high per
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
-            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
-            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })

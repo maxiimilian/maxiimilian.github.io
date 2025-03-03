@@ -13,9 +13,7 @@ These scripts can be easily parallized with Slurm arrays.
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/blog/slurm_python_array/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
@@ -41,7 +39,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -62,22 +60,20 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="Parallelizing Python scripts with Slurm arrays" />
-<meta property="og:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
-Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
-These scripts can be easily parallized with Slurm arrays.
-Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/blog/slurm_python_array/" /><meta property="article:section" content="blog" />
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Parallelizing Python scripts with Slurm arrays"/>
+<meta property="og:url" content="https://maximilian-pierzyna.de/blog/slurm_python_array/">
+  <meta property="og:site_name" content="Maximilian Pierzyna">
+  <meta property="og:title" content="Parallelizing Python scripts with Slurm arrays">
+  <meta property="og:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.
+Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Parallelizing Python scripts with Slurm arrays">
 <meta name="twitter:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.
-Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop."/>
+Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.">
 
 
 <script type="application/ld+json">
@@ -135,13 +131,10 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -151,7 +144,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
         <div class="logo">
             <a href="https://maximilian-pierzyna.de/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -171,8 +164,6 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -194,7 +185,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 <article class="post-single">
   <header class="post-header">
     
-    <h1 class="post-title">
+    <h1 class="post-title entry-hint-parent">
       Parallelizing Python scripts with Slurm arrays
     </h1>
     <div class="post-meta">
@@ -337,7 +328,8 @@ That variable will get populated by Slurm with what is given in the script, here
     </main>
     
 <footer class="footer">
-    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+        <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -420,11 +412,9 @@ That variable will get populated by Slurm with what is given in the script, here
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
-            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
-            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })

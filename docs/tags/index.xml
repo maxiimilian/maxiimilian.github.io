@@ -4,43 +4,36 @@
     <title>Tags on Maximilian Pierzyna</title>
     <link>https://maximilian-pierzyna.de/tags/</link>
     <description>Recent content in Tags on Maximilian Pierzyna</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://maximilian-pierzyna.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <atom:link href="https://maximilian-pierzyna.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Earth Observation</title>
       <link>https://maximilian-pierzyna.de/tags/earth-observation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/tags/earth-observation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Machine Learning</title>
       <link>https://maximilian-pierzyna.de/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/tags/machine-learning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mesoscale Modelling</title>
       <link>https://maximilian-pierzyna.de/tags/mesoscale-modelling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/tags/mesoscale-modelling/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Optical Turbulence</title>
       <link>https://maximilian-pierzyna.de/tags/optical-turbulence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/tags/optical-turbulence/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

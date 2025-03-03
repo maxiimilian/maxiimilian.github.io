@@ -4,13 +4,13 @@
     <title>Optical Turbulence on Maximilian Pierzyna</title>
     <link>https://maximilian-pierzyna.de/tags/optical-turbulence/</link>
     <description>Recent content in Optical Turbulence on Maximilian Pierzyna</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://maximilian-pierzyna.de/tags/optical-turbulence/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <atom:link href="https://maximilian-pierzyna.de/tags/optical-turbulence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer</title>
       <link>https://maximilian-pierzyna.de/research/2023a_piml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2023a_piml/</guid>
       <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
@@ -18,12 +18,10 @@ In this letter, we propose a physics-informed machine learning (ML) methodology,
 Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
 For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation</title>
       <link>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
       <description>&lt;p&gt;Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
 but they are prone to disturbance through atmospheric processes such as optical turbulence.
@@ -35,12 +33,10 @@ We employ the Weather Research and Forecasting model (WRF) with ten different pl
 We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
 We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations</title>
       <link>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
       <description>&lt;p&gt;For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
 Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
@@ -51,12 +47,10 @@ Each parameterization is applied to both observed and simulated meteorological v
 The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
 We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
       <link>https://maximilian-pierzyna.de/research/2024c_otclim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
       <description>&lt;p&gt;This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
 OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
@@ -68,6 +62,5 @@ A feature importance analysis confirms the physical consistency of the trained m
 It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
 OTCliM&amp;rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

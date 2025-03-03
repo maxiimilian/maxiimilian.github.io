@@ -4,13 +4,13 @@
     <title>Earth Observation on Maximilian Pierzyna</title>
     <link>https://maximilian-pierzyna.de/tags/earth-observation/</link>
     <description>Recent content in Earth Observation on Maximilian Pierzyna</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://maximilian-pierzyna.de/tags/earth-observation/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <atom:link href="https://maximilian-pierzyna.de/tags/earth-observation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring</title>
       <link>https://maximilian-pierzyna.de/research/2024a_kelpnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024a_kelpnet/</guid>
       <description>&lt;p&gt;Kelp forests are critical for marine ecosystems.
 They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
@@ -20,6 +20,5 @@ Both model types are created as ensembles of 25 members producing probabilistic 
 A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
 Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &amp;ldquo;KelpWanted&amp;rdquo; machine learning competition (#38/671, 3.88% below winning solution).&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

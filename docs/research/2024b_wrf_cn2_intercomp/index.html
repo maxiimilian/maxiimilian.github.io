@@ -17,9 +17,7 @@ The variance-based parameterization yields the overall best performance, and unl
 We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.">
 <meta name="author" content="">
 <link rel="canonical" href="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.def254c4125878035dd006ecaf36b245f24d05c3c4c45660baf038ed12ae6cc3.css" integrity="sha256-3vJUxBJYeANd0AbsrzayRfJNBcPExFZguvA47RKubMM=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
@@ -45,7 +43,7 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -66,23 +64,19 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     </style>
 </noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<meta property="og:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations" />
-<meta property="og:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
-Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
-If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
-Even though various such parameterizations exist in the literature, their relative performance is unknown.
-We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
-Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
-The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
-We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/" /><meta property="og:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg"/><meta property="article:section" content="research" />
-
-
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg"/>
-<meta name="twitter:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations"/>
+<meta property="og:url" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/">
+  <meta property="og:site_name" content="Maximilian Pierzyna">
+  <meta property="og:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations">
+  <meta property="og:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown. We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization. Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers. The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer. We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="research">
+    <meta property="article:tag" content="Mesoscale Modelling">
+    <meta property="article:tag" content="Optical Turbulence">
+      <meta property="og:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg">
+<meta name="twitter:title" content="Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations">
 <meta name="twitter:description" content="For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
 Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
 If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
@@ -90,7 +84,7 @@ Even though various such parameterizations exist in the literature, their relati
 We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization.
 Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers.
 The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
-We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling."/>
+We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.">
 
 
 <script type="application/ld+json">
@@ -126,7 +120,7 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
   "articleBody": "For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce. Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations. If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output. Even though various such parameterizations exist in the literature, their relative performance is unknown. We fill this knowledge gap by performing a systematic three-way comparison of a flux-based, a gradient-based, and a variance-based parameterization. Each parameterization is applied to both observed and simulated meteorological variables, and the resulting $C_n^2$ estimates are compared against observed $C_n^2$ from two scintillometers. The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer. We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.\nThe namelist files to run the WRF model and the Python code to post-process the simulation output to obtain $C_n^2$ are available on Github: https://github.com/mpierzyna/wrf_cn2_intercomp.\n",
   "wordCount" : "205",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
+  "image": "https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/thumbnail.jpg","datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -148,13 +142,10 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -164,7 +155,7 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
         <div class="logo">
             <a href="https://maximilian-pierzyna.de/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -184,8 +175,6 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -248,7 +237,8 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     </main>
     
 <footer class="footer">
-    <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span>
+        <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -331,11 +321,9 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
-            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
-            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })

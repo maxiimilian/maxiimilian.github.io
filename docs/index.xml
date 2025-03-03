@@ -4,13 +4,13 @@
     <title>Maximilian Pierzyna</title>
     <link>https://maximilian-pierzyna.de/</link>
     <description>Recent content on Maximilian Pierzyna</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.145.0</generator>
+    <language>en</language>
+    <atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://maximilian-pierzyna.de/card/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/card/</guid>
       <description>&lt;div class=&#34;business-card&#34;&gt;
     &lt;div class=&#34;business-card-content&#34;&gt;
@@ -49,12 +49,10 @@
     &lt;div style=&#34;clear: both&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer</title>
       <link>https://maximilian-pierzyna.de/research/2023a_piml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2023a_piml/</guid>
       <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
@@ -62,12 +60,10 @@ In this letter, we propose a physics-informed machine learning (ML) methodology,
 Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
 For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation</title>
       <link>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
       <description>&lt;p&gt;Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
 but they are prone to disturbance through atmospheric processes such as optical turbulence.
@@ -79,12 +75,10 @@ We employ the Weather Research and Forecasting model (WRF) with ten different pl
 We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
 We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Availability</title>
       <link>https://maximilian-pierzyna.de/agenda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/agenda/</guid>
       <description>&lt;p&gt;
     Below you can see my availability for meetings. 
@@ -92,12 +86,10 @@ We believe that FSOC downstream tasks such as link budget estimations should als
 &lt;/p&gt;
 &lt;iframe src=&#34;https://outlook.office365.com/calendar/published/7775c2b06e5a45198420cc77320d113d@tudelft.nl/84a899c1c38a4b259308a091b4e5db2f14914976016098583698/calendar.html&#34; style=&#34;width: 100%; height: 800px;&#34;&gt;&lt;/iframe&gt;</description>
     </item>
-    
     <item>
       <title>Contact</title>
       <link>https://maximilian-pierzyna.de/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/contact/</guid>
       <description>&lt;p&gt;I am happy to receive questions or inquiries via the contact form below. Alternatively, you can download my &lt;a href=&#34;https://maximilian-pierzyna.de/pierzyna_maximilian.vcf&#34;&gt;virtual business card (vCard, 1KB)&lt;/a&gt; with my contact details.&lt;/p&gt;
 &lt;form name=&#34;contact&#34; method=&#34;POST&#34; action=&#34;https://formspree.io/f/xyybddvj&#34;&gt;
@@ -119,12 +111,10 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     &lt;/div&gt;
     &lt;p style=&#34;color: var(--secondary); font-size: 0.8em;&#34;&gt;Please note that this contact form uses &lt;a href=&#34;https://formspree.io/&#34;&gt;Formspree&lt;/a&gt; to process the contact request. This external service uses servers outside the EU. Until the contact form is submitted, no data are transmitted to Formspree. By using this form you agree to your data being processed by Formspree.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Data-driven splashing threshold model for drop impact on dry smooth surfaces</title>
       <link>https://maximilian-pierzyna.de/research/2021_drop_impact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2021_drop_impact/</guid>
       <description>&lt;p&gt;We propose a data-driven threshold model to redefine the boundary between deposition and splashing
 for drop impact on dry smooth surfaces. The starting point is the collection and digitization of
@@ -142,12 +132,10 @@ with state-of-the-art models show that the proposed threshold model is the most 
 describe the boundaries between deposition and splashing for a wide range of impact conditions.
 The simplicity and accuracy of this model make it an alternative to existing approaches.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations</title>
       <link>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
       <description>&lt;p&gt;For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
 Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
@@ -158,12 +146,10 @@ Each parameterization is applied to both observed and simulated meteorological v
 The variance-based parameterization yields the overall best performance, and unlike other approaches, its application is not limited to the lowest part of the atmospheric boundary layer, i.e., the surface layer.
 We also show that $C_n^2$ estimated from the output of the Weather Research and Forecasting (WRF) model aligns well with observations, highlighting the value of mesoscale models for optical turbulence modeling.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring</title>
       <link>https://maximilian-pierzyna.de/research/2024a_kelpnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024a_kelpnet/</guid>
       <description>&lt;p&gt;Kelp forests are critical for marine ecosystems.
 They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
@@ -173,12 +159,10 @@ Both model types are created as ensembles of 25 members producing probabilistic 
 A comparison of the classification and segmentation outputs allows for human sanity checking of the model predictions.
 Our approach yields a high accuracy with a mean dice score of 0.7047 on test data and performed well in the DrivenData &amp;ldquo;KelpWanted&amp;rdquo; machine learning competition (#38/671, 3.88% below winning solution).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
       <link>https://maximilian-pierzyna.de/research/2024c_otclim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
       <description>&lt;p&gt;This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
 OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
@@ -190,27 +174,22 @@ A feature importance analysis confirms the physical consistency of the trained m
 It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
 OTCliM&amp;rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Parallelizing Python scripts with Slurm arrays</title>
       <link>https://maximilian-pierzyna.de/blog/slurm_python_array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/blog/slurm_python_array/</guid>
       <description>&lt;p&gt;Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
 &lt;p&gt;Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the &lt;code&gt;$SLURM_ARRAY_TASK_ID&lt;/code&gt;, which is the iteration variable of your loop.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Zoom</title>
       <link>https://maximilian-pierzyna.de/zoom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://maximilian-pierzyna.de/zoom/</guid>
       <description>&lt;p&gt;To access my personal Zoom room, please click &lt;a href=&#34;https://tudelft.zoom.us/j/9401991708?pwd=MUdmVWdzTTFSZzdHWXlMUFBOSEdVUT09&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
