@@ -132,3 +132,23 @@ code.has-jax {
     border-radius: 0;
     cursor: pointer;
 }
+
+/* Overwrite too large footer margin */
+.post-footer {
+    margin-top: 12px;
+}
+
+/* short me */
+#short_me hr {
+    /*margin-top: 12px;*/
+    margin: 24px 0;
+}
+
+#short_me img {
+    height: 100px;
+    width: 100px;
+    margin-right: 12px;
+    float: left;
+}
+#short_me div {
+}

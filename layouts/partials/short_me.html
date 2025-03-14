@@ -1,0 +1,11 @@
+<div id="short_me">
+        <hr />
+        {{- with site.Params.profileMode }}
+        <a href="/"><img src="{{ .imageUrl | absURL }}" /></a>
+        <div>
+                <p><a href="/"><b>{{ .title | default site.Title | markdownify }}</b></a></p>
+                <span>{{ .subtitle | markdownify }}</span>
+        </div>
+        <div style="clear: both"></div>
+        {{- end}}
+</div>
