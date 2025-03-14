@@ -149,6 +149,7 @@ code.has-jax {
     width: 100px;
     margin-right: 12px;
     float: left;
+    border-radius: 50%;
 }
 #short_me div {
 }

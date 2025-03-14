@@ -1,9 +1,8 @@
 {{- define "main" }}
 
-<article class="post-single publication">
+<article class="post-single">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    {{ .Params.authors | markdownify }}
     <h1 class="post-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
@@ -15,7 +14,6 @@
       </span>
       {{- end }}
     </h1>
-    {{- partial "publication_details.html" .Params }}
     {{- if .Description }}
     <div class="post-description">
       {{ .Description }}
@@ -38,8 +36,6 @@
 
   {{- if .Content }}
   <div class="post-content">
-    {{- partial "publication_header_img.html" . }}
-
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
@@ -60,7 +56,6 @@
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
     {{- partial "share_icons.html" . -}}
     {{- end }}
-    {{- partial "short_me.html" . -}}
   </footer>
 
   {{- if (.Param "comments") }}
