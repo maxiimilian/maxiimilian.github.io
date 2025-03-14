@@ -1,5 +1,8 @@
 ---
 Title: Parallelizing Python scripts with Slurm arrays
+ShowLicense: True
+tags:
+- HPC
 ---
 
 Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.

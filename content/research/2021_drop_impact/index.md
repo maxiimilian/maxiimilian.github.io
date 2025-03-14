@@ -15,6 +15,7 @@ pubYear: 2021
 pubUrl: https://aip.scitation.org/doi/10.1063/5.0076427
 pubCode: https://github.com/FlowModelingControl/data_driven_splashing_model
 pubOpenAccess: true
+hideSummary: true
 
 tags:
 - "Machine Learning"

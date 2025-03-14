@@ -14,6 +14,7 @@ pubJournal: Environmental Effects on Light Propagation and Adaptive Systems VI
 pubYear: 2023
 pubUrl: https://doi.org/10.1117/12.2680997
 pubOpenAccess: false
+hideSummary: true
 
 tags:
 - "Mesoscale Modelling"

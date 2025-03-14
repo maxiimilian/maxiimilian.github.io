@@ -7,6 +7,7 @@ authors: "**M. Pierzyna**"
 resources:
 - name: header
   src: kelpnet_header.jpg
+  title: ""
 
 pubKey: 2024a_kelp
 pubJournal: ESA-ECMWF ML4EOPS
@@ -14,6 +15,7 @@ pubYear: 2024
 pubCode: https://github.com/mpierzyna/kelpnet
 pubUrl: ./KelpNet_rev2_online.pdf
 pubOpenAccess: True
+hideSummary: True
 
 tags:
 - "Machine Learning"
