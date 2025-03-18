@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Maximilian Pierzyna</title>
-    <link>https://maximilian-pierzyna.de/</link>
+    <link>https://mpier.eu/</link>
     <description>Recent content on Maximilian Pierzyna</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <atom:link href="https://maximilian-pierzyna.de/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mpier.eu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://maximilian-pierzyna.de/card/</link>
+      <link>https://mpier.eu/card/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/card/</guid>
+      <guid>https://mpier.eu/card/</guid>
       <description>&lt;div class=&#34;business-card&#34;&gt;
     &lt;div class=&#34;business-card-content&#34;&gt;
         &lt;span style=&#34;font-size: 1.5em; font-weight: 700&#34;&gt;Maximilian Pierzyna&lt;/span&gt;&lt;br/&gt;
@@ -30,7 +30,7 @@
                 linkedin
             &lt;/a&gt;
             &lt;!-- vcard --&gt;
-            &lt;a href=&#34;https://maximilian-pierzyna.de/pierzyna_maximilian.vcf&#34;&gt;
+            &lt;a href=&#34;https://mpier.eu/pierzyna_maximilian.vcf&#34;&gt;
                 vcard
             &lt;/a&gt;
         &lt;/div&gt;
@@ -39,7 +39,7 @@
     &lt;div class=&#34;flip-card&#34;&gt;
         &lt;div class=&#34;flip-card-inner&#34;&gt;
             &lt;div class=&#34;flip-card-front&#34;&gt;
-                &lt;img src=&#34;https://maximilian-pierzyna.de/img/foto_me.jpg&#34; /&gt;
+                &lt;img src=&#34;https://mpier.eu/img/foto_me.jpg&#34; /&gt;
             &lt;/div&gt;
             &lt;div class=&#34;flip-card-back&#34;&gt;
                 QR CODE
@@ -51,9 +51,9 @@
     </item>
     <item>
       <title>$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer</title>
-      <link>https://maximilian-pierzyna.de/research/2023a_piml/</link>
+      <link>https://mpier.eu/research/2023a_piml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2023a_piml/</guid>
+      <guid>https://mpier.eu/research/2023a_piml/</guid>
       <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
 In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
@@ -62,9 +62,9 @@ For statistical robustness, we train an ensemble of models which yields high per
     </item>
     <item>
       <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation</title>
-      <link>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</link>
+      <link>https://mpier.eu/research/2023b_wrf_cn2_ens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2023b_wrf_cn2_ens/</guid>
+      <guid>https://mpier.eu/research/2023b_wrf_cn2_ens/</guid>
       <description>&lt;p&gt;Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
 but they are prone to disturbance through atmospheric processes such as optical turbulence.
 Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
@@ -77,9 +77,9 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     </item>
     <item>
       <title>Availability</title>
-      <link>https://maximilian-pierzyna.de/agenda/</link>
+      <link>https://mpier.eu/agenda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/agenda/</guid>
+      <guid>https://mpier.eu/agenda/</guid>
       <description>&lt;p&gt;
     Below you can see my availability for meetings. 
     If you do not see an embedded Outlook calendar, please click &lt;a href=&#34;https://outlook.office365.com/calendar/published/7775c2b06e5a45198420cc77320d113d@tudelft.nl/84a899c1c38a4b259308a091b4e5db2f14914976016098583698/calendar.html&#34;&gt;here&lt;/a&gt;.
@@ -88,10 +88,10 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     </item>
     <item>
       <title>Contact</title>
-      <link>https://maximilian-pierzyna.de/contact/</link>
+      <link>https://mpier.eu/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/contact/</guid>
-      <description>&lt;p&gt;I am happy to receive questions or inquiries via the contact form below. Alternatively, you can download my &lt;a href=&#34;https://maximilian-pierzyna.de/pierzyna_maximilian.vcf&#34;&gt;virtual business card (vCard, 1KB)&lt;/a&gt; with my contact details.&lt;/p&gt;
+      <guid>https://mpier.eu/contact/</guid>
+      <description>&lt;p&gt;I am happy to receive questions or inquiries via the contact form below. Alternatively, you can download my &lt;a href=&#34;https://mpier.eu/pierzyna_maximilian.vcf&#34;&gt;virtual business card (vCard, 1KB)&lt;/a&gt; with my contact details.&lt;/p&gt;
 &lt;form name=&#34;contact&#34; method=&#34;POST&#34; action=&#34;https://formspree.io/f/xyybddvj&#34;&gt;
     &lt;div class=&#34;form-group&#34;&gt;
         &lt;label for=&#34;name&#34; class=&#34;required&#34;&gt;Your name&lt;/label&gt;
@@ -113,9 +113,9 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     </item>
     <item>
       <title>Data-driven splashing threshold model for drop impact on dry smooth surfaces</title>
-      <link>https://maximilian-pierzyna.de/research/2021_drop_impact/</link>
+      <link>https://mpier.eu/research/2021_drop_impact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2021_drop_impact/</guid>
+      <guid>https://mpier.eu/research/2021_drop_impact/</guid>
       <description>&lt;p&gt;We propose a data-driven threshold model to redefine the boundary between deposition and splashing
 for drop impact on dry smooth surfaces. The starting point is the collection and digitization of
 multiple experimental sources with varying impact conditions. The model is based on the theory of
@@ -134,9 +134,9 @@ The simplicity and accuracy of this model make it an alternative to existing app
     </item>
     <item>
       <title>Intercomparison of flux, gradient, and variance-based optical turbulence ($C_n^2$) parameterizations</title>
-      <link>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</link>
+      <link>https://mpier.eu/research/2024b_wrf_cn2_intercomp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2024b_wrf_cn2_intercomp/</guid>
+      <guid>https://mpier.eu/research/2024b_wrf_cn2_intercomp/</guid>
       <description>&lt;p&gt;For free-space optical communication (FSOC) or ground-based optical astronomy, abundant data of optical turbulence strength ($C_n^2$) is imperative but typically scarce.
 Turbulence conditions are strongly site-dependent, so their accurate quantification requires in-situ measurements or numerical weather simulations.
 If $C_n^2$ is not measured directly, e.g., with a scintillometer, $C_n^2$ parameterizations must be utilized to estimate $C_n^2$ from meteorological observations or model output.
@@ -148,9 +148,9 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     </item>
     <item>
       <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring</title>
-      <link>https://maximilian-pierzyna.de/research/2024a_kelpnet/</link>
+      <link>https://mpier.eu/research/2024a_kelpnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2024a_kelpnet/</guid>
+      <guid>https://mpier.eu/research/2024a_kelpnet/</guid>
       <description>&lt;p&gt;Kelp forests are critical for marine ecosystems.
 They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
 We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
@@ -161,9 +161,9 @@ Our approach yields a high accuracy with a mean dice score of 0.7047 on test dat
     </item>
     <item>
       <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
-      <link>https://maximilian-pierzyna.de/research/2024c_otclim/</link>
+      <link>https://mpier.eu/research/2024c_otclim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2024c_otclim/</guid>
+      <guid>https://mpier.eu/research/2024c_otclim/</guid>
       <description>&lt;p&gt;This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
 OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
 Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
@@ -176,9 +176,9 @@ OTCliM&amp;rsquo;s ability to derive reliable $C_n^2$ climatologies from just on
     </item>
     <item>
       <title>Parallelizing Python scripts with Slurm arrays</title>
-      <link>https://maximilian-pierzyna.de/blog/slurm_python_array/</link>
+      <link>https://mpier.eu/blog/slurm_python_array/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/blog/slurm_python_array/</guid>
+      <guid>https://mpier.eu/blog/slurm_python_array/</guid>
       <description>&lt;p&gt;Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks.
 Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently.
 These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
@@ -186,9 +186,9 @@ These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
     </item>
     <item>
       <title>Zoom</title>
-      <link>https://maximilian-pierzyna.de/zoom/</link>
+      <link>https://mpier.eu/zoom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/zoom/</guid>
+      <guid>https://mpier.eu/zoom/</guid>
       <description>&lt;p&gt;To access my personal Zoom room, please click &lt;a href=&#34;https://tudelft.zoom.us/j/9401991708?pwd=MUdmVWdzTTFSZzdHWXlMUFBOSEdVUT09&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

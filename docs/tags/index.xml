@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Maximilian Pierzyna</title>
-    <link>https://maximilian-pierzyna.de/tags/</link>
+    <link>https://mpier.eu/tags/</link>
     <description>Recent content in Tags on Maximilian Pierzyna</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <atom:link href="https://maximilian-pierzyna.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mpier.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Earth Observation</title>
-      <link>https://maximilian-pierzyna.de/tags/earth-observation/</link>
+      <link>https://mpier.eu/tags/earth-observation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/tags/earth-observation/</guid>
+      <guid>https://mpier.eu/tags/earth-observation/</guid>
       <description></description>
     </item>
     <item>
       <title>HPC</title>
-      <link>https://maximilian-pierzyna.de/tags/hpc/</link>
+      <link>https://mpier.eu/tags/hpc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/tags/hpc/</guid>
+      <guid>https://mpier.eu/tags/hpc/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>https://maximilian-pierzyna.de/tags/machine-learning/</link>
+      <link>https://mpier.eu/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/tags/machine-learning/</guid>
+      <guid>https://mpier.eu/tags/machine-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesoscale Modelling</title>
-      <link>https://maximilian-pierzyna.de/tags/mesoscale-modelling/</link>
+      <link>https://mpier.eu/tags/mesoscale-modelling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/tags/mesoscale-modelling/</guid>
+      <guid>https://mpier.eu/tags/mesoscale-modelling/</guid>
       <description></description>
     </item>
     <item>
       <title>Optical Turbulence</title>
-      <link>https://maximilian-pierzyna.de/tags/optical-turbulence/</link>
+      <link>https://mpier.eu/tags/optical-turbulence/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/tags/optical-turbulence/</guid>
+      <guid>https://mpier.eu/tags/optical-turbulence/</guid>
       <description></description>
     </item>
   </channel>

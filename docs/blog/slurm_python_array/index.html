@@ -12,16 +12,16 @@ Think of a script, for example, that post-processes a large number of raw files,
 These scripts can be easily parallized with Slurm arrays.
 Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the $SLURM_ARRAY_TASK_ID, which is the iteration variable of your loop.">
 <meta name="author" content="">
-<link rel="canonical" href="https://maximilian-pierzyna.de/blog/slurm_python_array/">
+<link rel="canonical" href="https://mpier.eu/blog/slurm_python_array/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://maximilian-pierzyna.de/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://maximilian-pierzyna.de/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://maximilian-pierzyna.de/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://maximilian-pierzyna.de/apple-touch-icon.png">
-<link rel="mask-icon" href="https://maximilian-pierzyna.de/safari-pinned-tab.svg">
+<link rel="icon" href="https://mpier.eu/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mpier.eu/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mpier.eu/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://mpier.eu/apple-touch-icon.png">
+<link rel="mask-icon" href="https://mpier.eu/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://maximilian-pierzyna.de/blog/slurm_python_array/">
+<link rel="alternate" hreflang="en" href="https://mpier.eu/blog/slurm_python_array/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,11 +58,11 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
         }
 
     </style>
-</noscript><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://maximilian-pierzyna.de/css/manual.css">
+</noscript><link rel="stylesheet" href="https://mpier.eu/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://mpier.eu/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-<meta property="og:url" content="https://maximilian-pierzyna.de/blog/slurm_python_array/">
+<meta property="og:url" content="https://mpier.eu/blog/slurm_python_array/">
   <meta property="og:site_name" content="Maximilian Pierzyna">
   <meta property="og:title" content="Parallelizing Python scripts with Slurm arrays">
   <meta property="og:description" content="Sometimes, you have a simple Python script that iteratively performs a lot of similar tasks. Think of a script, for example, that post-processes a large number of raw files, where each execution can happen independently. These scripts can be easily parallized with Slurm arrays.
@@ -88,13 +88,13 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
       "@type": "ListItem",
       "position":  1 ,
       "name": "Blog",
-      "item": "https://maximilian-pierzyna.de/blog/"
+      "item": "https://mpier.eu/blog/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Parallelizing Python scripts with Slurm arrays",
-      "item": "https://maximilian-pierzyna.de/blog/slurm_python_array/"
+      "item": "https://mpier.eu/blog/slurm_python_array/"
     }
   ]
 }
@@ -116,14 +116,14 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
   "dateModified": "0001-01-01T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://maximilian-pierzyna.de/blog/slurm_python_array/"
+    "@id": "https://mpier.eu/blog/slurm_python_array/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Maximilian Pierzyna",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://maximilian-pierzyna.de/favicon.ico"
+      "url": "https://mpier.eu/favicon.ico"
     }
   }
 }
@@ -145,7 +145,7 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://maximilian-pierzyna.de/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
+            <a href="https://mpier.eu/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -171,12 +171,12 @@ Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You wi
         </div>
         <ul id="menu">
             <li>
-                <a href="https://maximilian-pierzyna.de/blog/" title="Blog">
+                <a href="https://mpier.eu/blog/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="https://maximilian-pierzyna.de/research/" title="Research">
+                <a href="https://mpier.eu/research/" title="Research">
                     <span>Research</span>
                 </a>
             </li>
@@ -329,14 +329,14 @@ That variable will get populated by Slurm with what is given in the script, here
 </div>
 
     <ul class="post-tags">
-      <li><a href="https://maximilian-pierzyna.de/tags/hpc/">HPC</a></li>
+      <li><a href="https://mpier.eu/tags/hpc/">HPC</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://maximilian-pierzyna.de/">Maximilian Pierzyna</a></span> · 
+        <span>&copy; 2025 <a href="https://mpier.eu/">Maximilian Pierzyna</a></span> · 
 
     <span>
         Powered by
@@ -348,7 +348,7 @@ That variable will get populated by Slurm with what is given in the script, here
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><script src="https://maximilian-pierzyna.de/js/custom.js"></script>
+</a><script src="https://mpier.eu/js/custom.js"></script>
 <script>
   MathJax = {
     tex: {

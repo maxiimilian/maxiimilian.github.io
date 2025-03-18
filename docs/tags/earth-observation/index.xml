@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Earth Observation on Maximilian Pierzyna</title>
-    <link>https://maximilian-pierzyna.de/tags/earth-observation/</link>
+    <link>https://mpier.eu/tags/earth-observation/</link>
     <description>Recent content in Earth Observation on Maximilian Pierzyna</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <atom:link href="https://maximilian-pierzyna.de/tags/earth-observation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mpier.eu/tags/earth-observation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring</title>
-      <link>https://maximilian-pierzyna.de/research/2024a_kelpnet/</link>
+      <link>https://mpier.eu/research/2024a_kelpnet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://maximilian-pierzyna.de/research/2024a_kelpnet/</guid>
+      <guid>https://mpier.eu/research/2024a_kelpnet/</guid>
       <description>&lt;p&gt;Kelp forests are critical for marine ecosystems.
 They harbor a diverse range of species and maintain ecological balance, which necessitates the accurate monitoring of their evolution.
 We propose a multi-task ensemble deep learning framework to predict probabilistic maps of kelp forests from Landsat 7 satellite imagery.
