@@ -9,10 +9,11 @@ resources:
   src: mcp.png
   title: "Proposed OTCliM approach to extrapolate a measured 1-year time series of optical turbulence strength (yellow) to multiple years (orange) based on ERA5 reference data (blue)."
 
-pubKey: 2024c_otclim
-pubJournal: arxiv
-pubYear: 2024
-pubUrl: http://arxiv.org/abs/2408.00520
+pubKey: 2025a_otclim
+pubJournal: Artifical Intelligence for the Earth Systems
+pubYear: 2025
+pubUrl: https://doi.org/10.1175/AIES-D-24-0076.1
+pubCode: https://github.com/mpierzyna/otclim
 pubOpenAccess: true
 
 tags:

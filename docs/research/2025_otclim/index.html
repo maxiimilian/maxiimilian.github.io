@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Machine Learning | Maximilian Pierzyna</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="robots" content="noindex, nofollow">
+<title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting | Maximilian Pierzyna</title>
+<meta name="keywords" content="Machine Learning, Optical Turbulence">
+<meta name="description" content="This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.">
 <meta name="author" content="">
-<link rel="canonical" href="https://mpier.eu/tags/machine-learning/">
+<link rel="canonical" href="http://localhost:1313/research/2025_otclim/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://mpier.eu/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mpier.eu/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mpier.eu/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://mpier.eu/apple-touch-icon.png">
-<link rel="mask-icon" href="https://mpier.eu/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://mpier.eu/tags/machine-learning/index.xml">
-<link rel="alternate" hreflang="en" href="https://mpier.eu/tags/machine-learning/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/research/2025_otclim/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,22 +63,14 @@
         }
 
     </style>
-</noscript><link rel="stylesheet" href="https://mpier.eu/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://mpier.eu/css/manual.css">
+</noscript><link rel="stylesheet" href="http://localhost:1313/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="http://localhost:1313/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-<meta property="og:url" content="https://mpier.eu/tags/machine-learning/">
-  <meta property="og:site_name" content="Maximilian Pierzyna">
-  <meta property="og:title" content="Machine Learning">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Machine Learning">
-<meta name="twitter:description" content="">
 
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -86,7 +85,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://mpier.eu/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -112,72 +111,72 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://mpier.eu/blog/" title="Blog">
+                <a href="http://localhost:1313/blog/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="https://mpier.eu/research/" title="Research">
+                <a href="http://localhost:1313/research/" title="Research">
                     <span>Research</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Machine Learning
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$. Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$. For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.
-...</p>
+<article class="post-single publication">
+  <header class="post-header">
+    
+    <strong>M. Pierzyna</strong>, S. Basu, R. Saathof
+    <h1 class="post-title entry-hint-parent">
+      OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting
+    </h1><div class="publication-details">
+    Artifical Intelligence for the Earth Systems (2025) | 
+    <a class="publication-url" href="https://doi.org/10.1175/AIES-D-24-0076.1" target="_blank">Full text <i class="ai ai-open-access" style="font-size: 1.15em"></i></a>
+</div>
+
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content">
+  <div class="publication-header-img">
+      <img src="http://localhost:1313/research/2025_otclim/mcp.png" alt="Proposed OTCliM approach to extrapolate a measured 1-year time series of optical turbulence strength (yellow) to multiple years (orange) based on ERA5 reference data (blue)."><div>Figure: Proposed OTCliM approach to extrapolate a measured 1-year time series of optical turbulence strength (yellow) to multiple years (orange) based on ERA5 reference data (blue).</div></div>
+
+<p>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
+OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
+Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
+We assess OTCliM&rsquo;s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization.
+Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models.
+Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies.
+A feature importance analysis confirms the physical consistency of the trained models.
+It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
+OTCliM&rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.</p>
+
+
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to $\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer" href="https://mpier.eu/research/2023a_piml/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Data-driven splashing threshold model for drop impact on dry smooth surfaces
-    </h2>
-  </header>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Data-driven splashing threshold model for drop impact on dry smooth surfaces" href="https://mpier.eu/research/2021_drop_impact/"></a>
-</article>
+  <footer class="post-footer">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring
-    </h2>
-  </header>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to KelpNet: Probabilistic Multi-Task Learning for Satellite-Based Kelp Forest Monitoring" href="https://mpier.eu/research/2024a_kelpnet/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines. OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication. Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series. We assess OTCliM’s performance using $C_n^2$ data from 17 diverse stations in New York State, evaluating temporal extrapolation capabilities and geographical generalization. Our results demonstrate accurate predictions of four held-out years of $C_n^2$ across various sites, including complex urban environments, outperforming traditional analytical models. Non-urban models also show good geographical generalization compared to urban models, which capture non-general site-specific dependencies. A feature importance analysis confirms the physical consistency of the trained models. It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data. OTCliM’s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.
-...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting" href="https://mpier.eu/research/2025a_otclim/"></a>
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="http://localhost:1313/tags/optical-turbulence/">Optical Turbulence</a></li>
+    </ul><div id="short_me">
+        <hr />
+        <a href="/"><img src="http://localhost:1313/img/foto_me.jpg" /></a>
+        <div>
+                <p><a href="/"><b>Maximilian Pierzyna</b></a></p>
+                <span>curious about modelling atmospheric turbulence 💨 with data-driven methods 📊</span>
+        </div>
+        <div style="clear: both"></div>
+</div>
+</footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://mpier.eu/">Maximilian Pierzyna</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">Maximilian Pierzyna</a></span> · 
 
     <span>
         Powered by
@@ -189,7 +188,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><script src="https://mpier.eu/js/custom.js"></script>
+</a><script src="http://localhost:1313/js/custom.js"></script>
 <script>
   MathJax = {
     tex: {

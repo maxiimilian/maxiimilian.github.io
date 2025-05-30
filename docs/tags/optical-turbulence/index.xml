@@ -49,9 +49,9 @@ We also show that $C_n^2$ estimated from the output of the Weather Research and 
     </item>
     <item>
       <title>OTCliM: generating a near-surface climatology of optical turbulence strength ($C_n^2$) using gradient boosting</title>
-      <link>https://mpier.eu/research/2024c_otclim/</link>
+      <link>https://mpier.eu/research/2025a_otclim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mpier.eu/research/2024c_otclim/</guid>
+      <guid>https://mpier.eu/research/2025a_otclim/</guid>
       <description>&lt;p&gt;This study introduces OTCliM (Optical Turbulence Climatology using Machine learning), a novel approach for deriving comprehensive climatologies of atmospheric optical turbulence strength ($C_n^2$) using gradient boosting machines.
 OTCliM addresses the challenge of efficiently obtaining reliable site-specific $C_n^2$ climatologies, crucial for ground-based astronomy and free-space optical communication.
 Using gradient boosting machines and global reanalysis data, OTCliM extrapolates one year of measured $C_n^2$ into a multi-year time series.
