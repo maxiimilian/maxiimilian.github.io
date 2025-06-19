@@ -50,17 +50,6 @@
 &lt;/div&gt;</description>
     </item>
     <item>
-      <title>$\Pi$-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer</title>
-      <link>https://mpier.eu/research/2023a_piml/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mpier.eu/research/2023a_piml/</guid>
-      <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
-Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
-In this letter, we propose a physics-informed machine learning (ML) methodology, $\Pi$-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
-Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
-For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation</title>
       <link>https://mpier.eu/research/2023b_wrf_cn2_ens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -185,11 +174,31 @@ These scripts can be easily parallized with Slurm arrays.&lt;/p&gt;
 &lt;p&gt;Submitting a job as a Slurm array is like asking Slurm to run a for-loop. You will have access to an extra environment variable, the &lt;code&gt;$SLURM_ARRAY_TASK_ID&lt;/code&gt;, which is the iteration variable of your loop.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Tailor-made data-driven similarity theories for the temperature structure parameter $C_T^2$ in the lower atmospheric boundary layer</title>
+      <link>https://mpier.eu/research/2025b_piml_cabauw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mpier.eu/research/2025b_piml_cabauw/</guid>
+      <description>&lt;p&gt;Optical ground-based astronomy and future free-space optical communication (FSOC) suffer from light getting distorted when it propagates through the turbulent atmosphere.
+In astronomy, turbulent fluctuations of the atmospheric refractive index, known as optical turbulence (OT), cause blurry images and limit the detection of small objects.
+FSOC links, which use optical beams to transmit data instead of traditional radio waves, experience reduced data rates or even link interruptions due to laser beams getting distorted by OT.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Zoom</title>
       <link>https://mpier.eu/zoom/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mpier.eu/zoom/</guid>
       <description>&lt;p&gt;To access my personal Zoom room, please click &lt;a href=&#34;https://tudelft.zoom.us/j/9401991708?pwd=MUdmVWdzTTFSZzdHWXlMUFBOSEdVUT09&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Π-ML: A dimensional analysis-based machine learning parameterization of optical turbulence in the atmospheric surface layer</title>
+      <link>https://mpier.eu/research/2023a_piml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mpier.eu/research/2023a_piml/</guid>
+      <description>&lt;p&gt;Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams.
+Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links.
+In this letter, we propose a physics-informed machine learning (ML) methodology, Π-ML, based on dimensional analysis and gradient boosting to estimate $C_n^2$.
+Through a systematic feature importance analysis, we identify the normalized variance of potential temperature as the dominating feature for predicting $C_n^2$.
+For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

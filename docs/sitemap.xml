@@ -8,8 +8,6 @@
   </url><url>
     <loc>https://mpier.eu/card/</loc>
   </url><url>
-    <loc>https://mpier.eu/research/2023a_piml/</loc>
-  </url><url>
     <loc>https://mpier.eu/research/2023b_wrf_cn2_ens/</loc>
   </url><url>
     <loc>https://mpier.eu/agenda/</loc>
@@ -42,6 +40,10 @@
   </url><url>
     <loc>https://mpier.eu/tags/</loc>
   </url><url>
+    <loc>https://mpier.eu/research/2025b_piml_cabauw/</loc>
+  </url><url>
     <loc>https://mpier.eu/zoom/</loc>
+  </url><url>
+    <loc>https://mpier.eu/research/2023a_piml/</loc>
   </url>
 </urlset>
