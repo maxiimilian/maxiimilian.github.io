@@ -10,7 +10,7 @@
 <meta name="description" content="To access my personal Zoom room, please click here.">
 <meta name="author" content="">
 <link rel="canonical" href="https://mpier.eu/zoom/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.31b17241e5c96d8a19d44ba4fcc3409b2a3c8a8e784ea6505dca66fc872ca864.css" integrity="sha256-MbFyQeXJbYoZ1Euk/MNAmyo8io54TqZQXcpm/IcsqGQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://mpier.eu/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://mpier.eu/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://mpier.eu/favicon-32x32.png">
@@ -119,10 +119,13 @@
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.body.classList.remove('dark-mode');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        document.body.classList.add('dark-mode');
     }
 
 </script>
@@ -278,9 +281,11 @@
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.body.classList.remove('dark-mode');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.body.classList.add('dark-mode');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
