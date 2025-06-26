@@ -19,6 +19,7 @@ pubOpenAccess: false
 tags:
 - "Machine Learning"
 - "Optical Turbulence"
+- "Π-ML"
 ---
 Turbulent fluctuations of the atmospheric refraction index, so-called optical turbulence, can significantly distort propagating laser beams. 
 Therefore, modeling the strength of these fluctuations ($C_n^2$) is highly relevant for the successful development and deployment of future free-space optical communication links. 
@@ -27,3 +28,5 @@ Through a systematic feature importance analysis, we identify the normalized var
 For statistical robustness, we train an ensemble of models which yields high performance on the out-of-sample data of $R^2=0.958\pm0.001$.
 
 **Open access** version on arxiv: https://arxiv.org/abs/2304.12177.
+
+{{< qr >}}https://doi.org/10.1364/OL.492652{{< /qr >}}

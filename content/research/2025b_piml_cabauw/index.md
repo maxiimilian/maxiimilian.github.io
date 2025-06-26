@@ -18,6 +18,7 @@ pubOpenAccess: true
 tags:
 - "Machine Learning"
 - "Optical Turbulence"
+- "Π-ML"
 ---
 Optical ground-based astronomy and future free-space optical communication (FSOC) suffer from light getting distorted when it propagates through the turbulent atmosphere. 
 In astronomy, turbulent fluctuations of the atmospheric refractive index, known as optical turbulence (OT), cause blurry images and limit the detection of small objects. 
