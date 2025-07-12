@@ -31,4 +31,3 @@ That is why, turbulence parameterizations, which estimate turbulent parameters f
 
 ![Pi-ML poster](./piml_cabauw_web.png)
 
-High-resolution version of poster: [pdf, 3MB](./piml_cabauw_web.pdf)
