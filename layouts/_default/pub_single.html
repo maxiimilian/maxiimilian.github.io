@@ -37,9 +37,7 @@
   {{- end }}
 
   {{- if .Content }}
-  <div class="post-content">
-    {{- partial "publication_header_img.html" . }}
-
+  <div class="post-content md-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}

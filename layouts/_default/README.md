@@ -1,0 +1,1 @@
+Run `merge.sh` to update templates from upstream papermod.
