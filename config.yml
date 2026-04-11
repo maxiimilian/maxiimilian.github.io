@@ -63,7 +63,6 @@ params:
 
   # Custom CSS
   custom_css: 
-    - "css/halfmoon/halfmoon_hm-11.css"
     - "css/manual.css"
 
   # Custom JS (currently not in use)
