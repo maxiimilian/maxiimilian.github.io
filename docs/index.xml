@@ -4,7 +4,7 @@
     <title>Maximilian Pierzyna</title>
     <link>https://mpier.eu/</link>
     <description>Recent content on Maximilian Pierzyna</description>
-    <generator>Hugo -- 0.147.7</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://mpier.eu/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -162,6 +162,20 @@ Non-urban models also show good geographical generalization compared to urban mo
 A feature importance analysis confirms the physical consistency of the trained models.
 It also indicates the potential to uncover new insights into the physical processes governing $C_n^2$ from data.
 OTCliM&amp;rsquo;s ability to derive reliable $C_n^2$ climatologies from just one year of observations can potentially reduce resources required for future site surveys or enable studies for additional sites with the same resources.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OTProf: estimating high-resolution profiles of optical turbulence ($C_n^2$) from reanalysis using deep learning</title>
+      <link>https://mpier.eu/research/2026a_otprof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mpier.eu/research/2026a_otprof/</guid>
+      <description>&lt;p&gt;Accurate high-resolution vertical profiles of optical turbulence ($C_n^2$), which reflect local meteorology and topography, are crucial for ground-based optical astronomy and free-space optical communication.
+However, measuring these profiles or generating them with numerical weather models requires substantial operational or computational effort.
+In this work, we present OTProf, a deep-learning method that estimates high-resolution $C_n^2$ profiles from widely available coarse-resolution ERA5 reanalysis data.
+We evaluate the approach in the Netherlands and compare it with the commonly used Hufnagel-Valley model.
+Overall, OTProf reproduces the vertical structure of $C_n^2$ more accurately than Hufnagel-Valley and yields more accurate estimates of the Fried parameter $r_0$ and the scintillation index $\sigma_I^2$.
+As typical in machine learning, the $C_n^2$ predictions are slightly smoothed compared to reference data, especially in cases of rare strong turbulence.
+This smoothing affects the integrated parameters, sometimes leading to overly optimistic $r_0$ and $\sigma_I^2$ values.
+Despite this limitation, OTProf offers a more accurate, efficient, and physically consistent alternative to traditional analytical models and computationally expensive mesoscale models.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Parallelizing Python scripts with Slurm arrays</title>

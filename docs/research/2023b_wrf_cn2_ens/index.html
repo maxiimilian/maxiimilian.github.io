@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="en" dir="auto" data-theme="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@ We demonstrate that this ensemble outperforms the individual runs when compared 
 We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.">
 <meta name="author" content="">
 <link rel="canonical" href="https://mpier.eu/research/2023b_wrf_cn2_ens/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.31b17241e5c96d8a19d44ba4fcc3409b2a3c8a8e784ea6505dca66fc872ca864.css" integrity="sha256-MbFyQeXJbYoZ1Euk/MNAmyo8io54TqZQXcpm/IcsqGQ=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.47e51c7d8489b002361bac156ce9a0a8776d08c5462c2cee95801efafdd90d35.css" integrity="sha256-R&#43;UcfYSJsAI2G6wVbOmgqHdtCMVGLCzulYAe&#43;v3ZDTU=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://mpier.eu/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://mpier.eu/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://mpier.eu/favicon-32x32.png">
@@ -47,23 +47,32 @@ We believe that FSOC downstream tasks such as link budget estimations should als
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
+                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
+            .toc {
+                background: var(--entry);
             }
         }
 
     </style>
-</noscript><link rel="stylesheet" href="https://mpier.eu/css/halfmoon/halfmoon_hm-11.css"><link rel="stylesheet" href="https://mpier.eu/css/manual.css">
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><link rel="stylesheet" href="https://mpier.eu/css/manual.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
@@ -76,17 +85,10 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     <meta property="article:section" content="research">
     <meta property="article:tag" content="Mesoscale Modelling">
     <meta property="article:tag" content="Optical Turbulence">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation">
-<meta name="twitter:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
-but they are prone to disturbance through atmospheric processes such as optical turbulence.
-Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
-Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
-However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented.
-To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$.
-We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate.
-We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers.
-We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A multi-physics ensemble modeling framework for reliable $C_n^2$ estimation">
+  <meta name="twitter:description" content="Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world, but they are prone to disturbance through atmospheric processes such as optical turbulence. Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network. Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$. However, the outputs of these models can exhibit substantial variability based on the user-defined configuration that determines how atmospheric processes are represented. To address this concern, we propose to run not a single model configuration but multiple diverse ones to generate an ensemble estimate of $C_n^2$. We employ the Weather Research and Forecasting model (WRF) with ten different planetary boundary layer (PBL) physics schemes forming a diverse ensemble yielding a probabilistic $C_n^2$ estimate. We demonstrate that this ensemble outperforms the individual runs when compared to scintillometer field measurements and show it to be robust against outliers. We believe that FSOC downstream tasks such as link budget estimations should also become more robust if based on a $C_n^2$ ensemble estimate compared to single model runs.">
 
 
 <script type="application/ld+json">
@@ -139,34 +141,19 @@ We believe that FSOC downstream tasks such as link budget estimations should als
 }
 </script>
 </head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-        document.body.classList.remove('dark-mode');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-        document.body.classList.add('dark-mode');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
         <div class="logo">
             <a href="https://mpier.eu/" accesskey="h" title="Maximilian Pierzyna (Alt + H)">Maximilian Pierzyna</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -182,7 +169,7 @@ We believe that FSOC downstream tasks such as link budget estimations should als
                 </button>
             </div>
         </div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li>
                 <a href="https://mpier.eu/blog/" title="Blog">
                     <span>Blog</span>
@@ -213,11 +200,11 @@ We believe that FSOC downstream tasks such as link budget estimations should als
 
 </div>
   </header> 
-  <div class="post-content">
   <div class="publication-header-img">
       <img src="https://mpier.eu/research/2023b_wrf_cn2_ens/2023b_wrf_cn2_ens.jpg" alt="Ensemble $C_n^2$ predictions from Weather Research and Forecasting model compared to observed $C_n^2$ from two scintillometers."><div>Figure: Ensemble $C_n^2$ predictions from Weather Research and Forecasting model compared to observed $C_n^2$ from two scintillometers.</div></div>
 
-<p>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
+
+  <div class="post-content md-content"><p>Free-space optical communication (FSOC) links are considered a key technology to support the increasing needs of our connected, data-heavy world,
 but they are prone to disturbance through atmospheric processes such as optical turbulence.
 Since turbulence is highly dependent on local topographic and meteorological conditions, modeling optical turbulence strength $C_n^2$ is challenging during the design phase of an optical link or network.
 Over the past 25 years, $C_n^2$ parameterizations of varying complexities have been combined with various numerical weather prediction models for the spatio-temporal estimation of $C_n^2$.
@@ -249,7 +236,7 @@ We believe that FSOC downstream tasks such as link budget estimations should als
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://mpier.eu/">Maximilian Pierzyna</a></span> · 
+        <span>&copy; 2026 <a href="https://mpier.eu/">Maximilian Pierzyna</a></span> · 
 
     <span>
         Powered by
@@ -257,9 +244,11 @@ We believe that FSOC downstream tasks such as link budget estimations should als
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
 </a><script src="https://mpier.eu/js/custom.js"></script>
 <script>
@@ -288,9 +277,14 @@ We believe that FSOC downstream tasks such as link budget estimations should als
 
 
 <script>
-    let menu = document.getElementById('menu')
+    let menu = document.getElementById('menu');
     if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -317,27 +311,25 @@ We believe that FSOC downstream tasks such as link budget estimations should als
 
 </script>
 <script>
-    var mybutton = document.getElementById("top-link");
+    var toplink = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+            toplink.classList.add("hidden");
         }
     };
 
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            document.body.classList.remove('dark-mode');
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
             localStorage.setItem("pref-theme", 'light');
         } else {
-            document.body.classList.add('dark');
-            document.body.classList.add('dark-mode');
+            html.dataset.theme = 'dark';
             localStorage.setItem("pref-theme", 'dark');
         }
     })
