@@ -68,5 +68,3 @@ params:
   # Custom JS (currently not in use)
   custom_js: 
     - "js/custom.js"
-
-
