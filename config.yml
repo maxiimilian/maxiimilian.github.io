@@ -46,8 +46,8 @@ params:
       # Button names can be i18n id to be translated on language switch
       - name: Research
         url: "/research"
-      - name: CV (PDF)
-        url: "/files/Maximilian_Pierzyna_CV.pdf"
+      - name: "Curriculum Vitae"
+        url: "/cv"
       - name: Contact
         url: "contact"
 

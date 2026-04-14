@@ -1,0 +1,16 @@
+---
+title: "Curriculum Vitae"
+---
+<p>You can find my CV embedded below or as a <a href="/files/Maximilian_Pierzyna_CV.pdf" target="_blank">PDF file</a>.</p>
+<div id="pdf-viewer" style="height: 100vh"></div>
+ 
+<script type="module">
+  import EmbedPDF from 'https://cdn.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';
+ 
+  EmbedPDF.init({
+    type: 'container',
+    target: document.getElementById('pdf-viewer'),
+    src: '/files/Maximilian_Pierzyna_CV.pdf',
+    theme: { preference: 'system' }
+  });
+</script>
