@@ -13,7 +13,7 @@ pubKey: 2026a_otclim
 pubJournal: arXiv (submitted to journal)
 pubYear: 2026
 pubUrl: https://arxiv.org/abs/2604.09346
-# pubCode: https://github.com/mpierzyna/otprof
+pubCode: https://github.com/mpierzyna/otprof
 pubOpenAccess: true
 
 tags:
