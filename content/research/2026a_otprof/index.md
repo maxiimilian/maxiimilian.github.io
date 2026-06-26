@@ -28,3 +28,8 @@ Overall, OTProf reproduces the vertical structure of $C_n^2$ more accurately tha
 As typical in machine learning, the $C_n^2$ predictions are slightly smoothed compared to reference data, especially in cases of rare strong turbulence.
 This smoothing affects the integrated parameters, sometimes leading to overly optimistic $r_0$ and $\sigma_I^2$ values.
 Despite this limitation, OTProf offers a more accurate, efficient, and physically consistent alternative to traditional analytical models and computationally expensive mesoscale models.
+
+### Recorded talk
+I presented this research on 14 April 2026 at the *5th ECMWF-ESA Machine Learning Workshop* in Bologna, Italy. You can watch the recording below.
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1182990398?h=620dff8e17" frameborder="0" width=620 height=360 referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>

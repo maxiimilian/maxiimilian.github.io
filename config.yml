@@ -32,6 +32,11 @@ privacy:
   youtube:
     disable: true
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 # Site params
 params:
   displayFullLangName: true
@@ -68,3 +73,5 @@ params:
   # Custom JS (currently not in use)
   custom_js: 
     - "js/custom.js"
+
+
